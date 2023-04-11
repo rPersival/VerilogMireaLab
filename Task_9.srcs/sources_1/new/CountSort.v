@@ -2,27 +2,33 @@
 
 module CountSort(
     input clock,
-    input[31:0] value,
+    input[63:0] value,
     input isReadyInput,
     input isResetted,
     output reg isReadyOutput = 0,
-    output wire[31:0] outValue);
+    output wire[63:0] outValue);
 
 reg[2:0] state = 0;
-reg[31:0] currentValue = 0, outReg = 0;
+reg[63:0] currentValue = 0, outReg = 0;
 reg[63:0] count = 0;
 
-wire[2:0] firstIterator, thirdIterator;
+wire[3:0] firstIterator, thirdIterator;
 wire[3:0] secondIterator;
 
-Counter #(.step(1), .mod(8)) firstCounter (.clock(clock), .isEnabled(state == 1), .out(firstIterator), .isResetted(isResetted));
+Counter #(.step(1), .mod(16)) firstCounter (.clock(clock), .isEnabled(state == 1), .out(firstIterator), .isResetted(isResetted));
 Counter #(.step(1), .mod(16), .startValue(1)) secondCounter (.clock(clock), .isEnabled(state == 2), .out(secondIterator), .isResetted(isResetted));
-Counter #(.step(-1), .mod(8), .startValue(7)) thirdCounter (.clock(clock), .isEnabled(state == 3), .out(thirdIterator), .isResetted(isResetted));
+Counter #(.step(-1), .mod(16), .startValue(15)) thirdCounter (.clock(clock), .isEnabled(state == 3), .out(thirdIterator), .isResetted(isResetted));
 
 always @(posedge clock) 
 begin
     if (isResetted)
+    begin
         state = 0;
+        currentValue = 0;
+        outReg = 0;
+        count = 0;
+        isReadyOutput = 0;
+    end
 
     else 
         case (state)
@@ -40,7 +46,7 @@ begin
                 count[currentValue[4 * firstIterator +: 4] * 4 +:4] = count[currentValue[4 * firstIterator +: 4] * 4 +:4] + 1;
 
                 //count[i]++
-                if (firstIterator == 3'd7)
+                if (firstIterator == 4'd15)
                     state = 2;
             end
             

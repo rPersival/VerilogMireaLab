@@ -12,20 +12,22 @@ reg inputButton = 0;
 reg sortButton = 0;
 reg leftButton = 0;
 reg rightButton = 0;
-reg resetButton = 1;
+reg resetButton = 0;
 
 reg[7:0] mask = 8'b0000_0000;
 wire[7:0] segmentValues;
 wire[7:0] outMask;
 
-// initial
-// begin
-//    #10000000
-//    leftButton = ~leftButton;
-// end
+initial
+begin
+   #10000000
+   sortButton = 1;
+   #10000000
+   sortButton = 0;
+end
 
-always #10000000
-    leftButton = ~leftButton;
+// always #10000000
+//     leftButton = ~leftButton;
 
 //  always #100000000
 //      test = (test + 1) % 8;
