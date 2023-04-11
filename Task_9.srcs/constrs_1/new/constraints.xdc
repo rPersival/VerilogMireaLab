@@ -55,7 +55,13 @@ set_property IOSTANDARD LVCMOS33 [ get_ports { button } ]
 set_property PACKAGE_PIN M18 [ get_ports { sortButton } ]
 set_property IOSTANDARD LVCMOS33 [ get_ports { sortButton } ]
 
-set_property PACKAGE_PIN C12 [ get_ports { resetButton } ]
+set_property PACKAGE_PIN P17 [ get_ports { leftButton } ]
+set_property IOSTANDARD LVCMOS33 [ get_ports { leftButton } ]
+
+set_property PACKAGE_PIN M17 [ get_ports { rightButton } ]
+set_property IOSTANDARD LVCMOS33 [ get_ports { rightButton } ]
+
+set_property PACKAGE_PIN P18 [ get_ports { resetButton } ]
 set_property IOSTANDARD LVCMOS33 [ get_ports { resetButton } ]
 
 # Clock
