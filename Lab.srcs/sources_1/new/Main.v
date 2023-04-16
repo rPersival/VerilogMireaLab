@@ -1,14 +1,28 @@
 `timescale 1ns / 1ps
 
-module Main(input clock, input[3:0] inp, input button, input sortButton, input resetButton, input leftButton, 
-                input rightButton, input[7:0] mask, output[7:0] segmentValues, output[7:0] outMask);
+module Main(input clock, //clock
+            input[3:0] inp, //switch_values
+            input button, //button
+            input sortButton, //button
+            input resetButton, //button
+            input leftButton,  //button
+            input rightButton, //button
+            input[7:0] mask, //switch_values
+            input keyboardClock, //keyboard_values
+            input keyboardData, //keyboard_values
+            
+            output[7:0] segmentValues,
+            output[7:0] outMask);
 
 wire[63:0] innerBus;
 wire[31:0] outDigits;
 wire[63:0] tempDigits;
 wire[2:0] counterOut;
 wire isReadyOutput;
+wire isKeyboardReadyOutput;
+wire[3:0] keyboardOut;
 wire outClock;
+wire[1:0] flags;
 
 wire bottomSignalButton;
 wire topSignalButton;
@@ -26,7 +40,13 @@ wire bottomSignalRightButton;
 wire topSignalRightButton;
 
 // UI modules
-ShiftRegister shiftRegister(.clock(clock), .inp(inp), .isResetted(bottomSignalResetButton && topSignalResetButton), .inputButton(bottomSignalButton && topSignalButton), .leftButton(bottomSignalLeftButton && topSignalLeftButton),
+
+//Switches input
+//ShiftRegister shiftRegister(.clock(clock), .inp(inp), .isResetted(bottomSignalResetButton && topSignalResetButton), .inputButton(bottomSignalButton && topSignalButton), .leftButton(bottomSignalLeftButton && topSignalLeftButton),
+//                                .rightButton(bottomSignalRightButton && topSignalRightButton), .tempDigits(tempDigits), .isReadyOutput(isReadyOutput), .out(outDigits), .innerBus(innerBus));
+
+//Keyboard input
+ShiftRegister shiftRegister(.clock(clock), .inp(keyboardOut), .isResetted(bottomSignalResetButton && topSignalResetButton), .inputButton(flags[1]), .leftButton(bottomSignalLeftButton && topSignalLeftButton),
                                 .rightButton(bottomSignalRightButton && topSignalRightButton), .tempDigits(tempDigits), .isReadyOutput(isReadyOutput), .out(outDigits), .innerBus(innerBus));
 
 ClockDivider #(10240) divider(.clock(clock), .outClock(outClock));
@@ -44,8 +64,9 @@ SegmentRegister segmentRegister(.clock(outClock), .address(counterOut), .value(o
 AnodesMaskRegister anodesRegister(.clock(outClock), .address(counterOut), .mask(mask), .anodes(outMask));
 
 // Logic modules
-CountSort countSort(.clock(clock), .value(innerBus), .isReadyInput(bottomSignalSortButton && topSignalSortButton), 
+CountSort countSort(.clock(clock), .value(innerBus), .isReadyInput(bottomSignalSortButton && topSignalSortButton),
    .isResetted(bottomSignalResetButton && topSignalResetButton), .isReadyOutput(isReadyOutput), .outValue(tempDigits));
 
+keyboardSymbolDecoder symbolDecoder(.clock(clock), .keyboardClock(keyboardClock), .keyboardData(keyboardData), .isReadyOutput(isKeyboardReadyOutput), .out(keyboardOut), .flags(flags));
 
 endmodule
