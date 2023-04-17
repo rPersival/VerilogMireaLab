@@ -54,6 +54,7 @@ begin
         numberScancodes[14]: out = 4'hE;
         numberScancodes[15]: out = 4'hF;   
         
+//        enterScancode: out = 4;
         enterScancode: out = 0;
         
         default: out = 0;

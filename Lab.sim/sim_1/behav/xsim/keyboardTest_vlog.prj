@@ -9,7 +9,10 @@ verilog xil_defaultlib  \
 "../../../../Lab.srcs/sources_1/new/SegmentRegister.v" \
 "../../../../Lab.srcs/sources_1/new/ShiftRegister.v" \
 "../../../../Lab.srcs/sources_1/new/Synchronization.v" \
-"../../../../Lab.srcs/sim_1/new/Test.v" \
+"../../../../Lab.srcs/sources_1/new/keyboardSymbolDecoder.v" \
+"../../../../Lab.srcs/sources_1/new/packetDecoder.v" \
+"../../../../Lab.srcs/sources_1/new/packetHandler.v" \
+"../../../../Lab.srcs/sim_1/new/keyboardTest.v" \
 
 # compile glbl module
 verilog xil_defaultlib "glbl.v"

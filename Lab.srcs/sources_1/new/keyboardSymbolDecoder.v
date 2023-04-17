@@ -6,7 +6,7 @@ module keyboardSymbolDecoder
     input keyboardClock,
     input keyboardData,
     
-    output isReadyOutput,
+    output reg isReadyOutput,
     output[3:0] out,
     output[1:0] flags
 );
@@ -29,7 +29,7 @@ end
 always@ (posedge clock)
 begin
     case(state)
-        setSignalExcpectation:
+        setSignalExpectation:
         begin
             if (keyboardIsReadyOutput)
             begin
@@ -50,7 +50,7 @@ begin
         begin
             isReadyOutput <= 0;
             if (!keyboardIsReadyOutput)
-                state <= setSignalExcpectation;
+                state <= setSignalExpectation;
         end
     endcase
 end
