@@ -46,10 +46,10 @@ wire topSignalRightButton;
 //                                .rightButton(bottomSignalRightButton && topSignalRightButton), .tempDigits(tempDigits), .isReadyOutput(isReadyOutput), .out(outDigits), .innerBus(innerBus));
 
 //Keyboard input
-ShiftRegister shiftRegister(.clock(clock), .inp(keyboardOut), .isResetted(bottomSignalResetButton && topSignalResetButton), .inputButton(flags[1]), .leftButton(bottomSignalLeftButton && topSignalLeftButton),
+ShiftRegister shiftRegister(.clock(clock), .inp(keyboardOut), .isResetted(bottomSignalResetButton && topSignalResetButton), .inputFlags(flags), .inputButton(bottomSignalButton && topSignalButton), .leftButton(bottomSignalLeftButton && topSignalLeftButton),
                                 .rightButton(bottomSignalRightButton && topSignalRightButton), .tempDigits(tempDigits), .isReadyOutput(isReadyOutput), .out(outDigits), .innerBus(innerBus));
 
-ClockDivider #(10240) divider(.clock(clock), .outClock(outClock));
+ClockDivider #(40960) divider(.clock(clock), .outClock(outClock));
 
 // Button modules
 Filter filter1(.clock(clock), .isClockEnabled(1'b1), .signal(button), .bottomSignal(bottomSignalButton), .topSignal(topSignalButton));

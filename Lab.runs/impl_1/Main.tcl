@@ -17,7 +17,7 @@ proc create_report { reportName command } {
   }
 }
 namespace eval ::optrace {
-  variable script "D:/Alex/VerilogLab/VerilogMireaLab/Task_9.runs/impl_1/Main.tcl"
+  variable script "D:/Vivado_projects/VerilogMireaLab/Lab.runs/impl_1/Main.tcl"
   variable category "vivado_impl"
 }
 
@@ -115,8 +115,6 @@ proc step_failed { step } {
 OPTRACE "impl_1" END { }
 }
 
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 
 OPTRACE "impl_1" START { ROLLUP_1 }
 OPTRACE "Phase: Init Design" START { ROLLUP_AUTO }
@@ -124,24 +122,22 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param checkpoint.writeSynthRtdsInDcp 1
   set_param chipscope.maxJobs 2
-  set_param xicom.use_bs_reader 1
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7a100tcsg324-1
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
-  set_property webtalk.parent_dir D:/Alex/VerilogLab/VerilogMireaLab/Task_9.cache/wt [current_project]
-  set_property parent.project_path D:/Alex/VerilogLab/VerilogMireaLab/Task_9.xpr [current_project]
-  set_property ip_output_repo D:/Alex/VerilogLab/VerilogMireaLab/Task_9.cache/ip [current_project]
+  set_property webtalk.parent_dir D:/Vivado_projects/VerilogMireaLab/Lab.cache/wt [current_project]
+  set_property parent.project_path D:/Vivado_projects/VerilogMireaLab/Lab.xpr [current_project]
+  set_property ip_output_repo D:/Vivado_projects/VerilogMireaLab/Lab.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
-  add_files -quiet D:/Alex/VerilogLab/VerilogMireaLab/Task_9.runs/synth_1/Main.dcp
+  add_files -quiet D:/Vivado_projects/VerilogMireaLab/Lab.runs/synth_1/Main.dcp
 OPTRACE "read constraints: implementation" START { }
-  read_xdc D:/Alex/VerilogLab/VerilogMireaLab/Task_9.srcs/constrs_1/new/constraints.xdc
+  read_xdc D:/Vivado_projects/VerilogMireaLab/Lab.srcs/constrs_1/new/constraints.xdc
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "add files" END { }
 OPTRACE "link_design" START { }

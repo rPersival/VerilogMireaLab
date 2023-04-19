@@ -59,7 +59,9 @@ begin
         
         default: out = 0;
     endcase
-end      
+end
+
+
 
 always@(scancode)
 begin
@@ -70,7 +72,9 @@ begin
         numberScancodes[12], numberScancodes[13], numberScancodes[14], numberScancodes[15]:
             flags <= 1 << numberFlag;
         enterScancode:
+        begin
             flags <= 1 << enterFlag;
+        end
         default:
             flags <= 0;
     endcase

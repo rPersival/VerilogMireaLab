@@ -1,6 +1,6 @@
 # Keyboard
-set_property -dict {IOSTANDARD LVCMOS33 PACKAGE_PIN F4} [get_ports{keyboardClock}]
-set_property -dict {IOSTANDARD LVCMOS33 PACKAGE_PIN B2} [get_ports{keyboardData}]
+set_property -dict { IOSTANDARD LVCMOS33 PACKAGE_PIN F4 } [ get_ports { keyboardClock } ]
+set_property -dict { IOSTANDARD LVCMOS33 PACKAGE_PIN B2 } [ get_ports { keyboardData } ]
 
 # Switches
 set_property IOSTANDARD LVCMOS33 [ get_ports { inp } ]

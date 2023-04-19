@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "D:/Alex/VerilogLab/VerilogMireaLab/Task_9.runs/synth_1/Main.tcl"
+  variable script "D:/Vivado_projects/VerilogMireaLab/Lab.runs/synth_1/Main.tcl"
   variable category "vivado_synth"
 }
 
@@ -70,35 +70,34 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param checkpoint.writeSynthRtdsInDcp 1
 set_param chipscope.maxJobs 2
-set_param xicom.use_bs_reader 1
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a100tcsg324-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir D:/Alex/VerilogLab/VerilogMireaLab/Task_9.cache/wt [current_project]
-set_property parent.project_path D:/Alex/VerilogLab/VerilogMireaLab/Task_9.xpr [current_project]
+set_property webtalk.parent_dir D:/Vivado_projects/VerilogMireaLab/Lab.cache/wt [current_project]
+set_property parent.project_path D:/Vivado_projects/VerilogMireaLab/Lab.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo d:/Alex/VerilogLab/VerilogMireaLab/Task_9.cache/ip [current_project]
+set_property ip_output_repo d:/Vivado_projects/VerilogMireaLab/Lab.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib {
-  D:/Alex/VerilogLab/VerilogMireaLab/Task_9.srcs/sources_1/new/AnodesMaskRegister.v
-  D:/Alex/VerilogLab/VerilogMireaLab/Task_9.srcs/sources_1/new/ClockDivider.v
-  D:/Alex/VerilogLab/VerilogMireaLab/Task_9.srcs/sources_1/new/CountSort.v
-  D:/Alex/VerilogLab/VerilogMireaLab/Task_9.srcs/sources_1/new/Counter.v
-  D:/Alex/VerilogLab/VerilogMireaLab/Task_9.srcs/sources_1/new/Filter.v
-  D:/Alex/VerilogLab/VerilogMireaLab/Task_9.srcs/sources_1/new/SegmentRegister.v
-  D:/Alex/VerilogLab/VerilogMireaLab/Task_9.srcs/sources_1/new/ShiftRegister.v
-  D:/Alex/VerilogLab/VerilogMireaLab/Task_9.srcs/sources_1/new/Synchronization.v
-  D:/Alex/VerilogLab/VerilogMireaLab/Task_9.srcs/sources_1/new/Main.v
+  D:/Vivado_projects/VerilogMireaLab/Lab.srcs/sources_1/new/AnodesMaskRegister.v
+  D:/Vivado_projects/VerilogMireaLab/Lab.srcs/sources_1/new/ClockDivider.v
+  D:/Vivado_projects/VerilogMireaLab/Lab.srcs/sources_1/new/CountSort.v
+  D:/Vivado_projects/VerilogMireaLab/Lab.srcs/sources_1/new/Counter.v
+  D:/Vivado_projects/VerilogMireaLab/Lab.srcs/sources_1/new/Filter.v
+  D:/Vivado_projects/VerilogMireaLab/Lab.srcs/sources_1/new/SegmentRegister.v
+  D:/Vivado_projects/VerilogMireaLab/Lab.srcs/sources_1/new/ShiftRegister.v
+  D:/Vivado_projects/VerilogMireaLab/Lab.srcs/sources_1/new/Synchronization.v
+  D:/Vivado_projects/VerilogMireaLab/Lab.srcs/sources_1/new/keyboardSymbolDecoder.v
+  D:/Vivado_projects/VerilogMireaLab/Lab.srcs/sources_1/new/packetDecoder.v
+  D:/Vivado_projects/VerilogMireaLab/Lab.srcs/sources_1/new/packetHandler.v
+  D:/Vivado_projects/VerilogMireaLab/Lab.srcs/sources_1/new/Main.v
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -109,12 +108,12 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc D:/Alex/VerilogLab/VerilogMireaLab/Task_9.srcs/constrs_1/new/constraints.xdc
-set_property used_in_implementation false [get_files D:/Alex/VerilogLab/VerilogMireaLab/Task_9.srcs/constrs_1/new/constraints.xdc]
+read_xdc D:/Vivado_projects/VerilogMireaLab/Lab.srcs/constrs_1/new/constraints.xdc
+set_property used_in_implementation false [get_files D:/Vivado_projects/VerilogMireaLab/Lab.srcs/constrs_1/new/constraints.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 
-read_checkpoint -incremental D:/Alex/VerilogLab/VerilogMireaLab/Task_9.srcs/utils_1/imports/synth_1/Main.dcp
+read_checkpoint -incremental D:/Vivado_projects/VerilogMireaLab/Lab.srcs/utils_1/imports/synth_1/Main.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

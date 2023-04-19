@@ -5,14 +5,16 @@ verilog xil_defaultlib  \
 "../../../../Lab.srcs/sources_1/new/CountSort.v" \
 "../../../../Lab.srcs/sources_1/new/Counter.v" \
 "../../../../Lab.srcs/sources_1/new/Filter.v" \
-"../../../../Lab.srcs/sources_1/new/Main.v" \
 "../../../../Lab.srcs/sources_1/new/SegmentRegister.v" \
 "../../../../Lab.srcs/sources_1/new/ShiftRegister.v" \
 "../../../../Lab.srcs/sources_1/new/Synchronization.v" \
 "../../../../Lab.srcs/sources_1/new/keyboardSymbolDecoder.v" \
 "../../../../Lab.srcs/sources_1/new/packetDecoder.v" \
 "../../../../Lab.srcs/sources_1/new/packetHandler.v" \
+"../../../../Lab.srcs/sources_1/new/Main.v" \
+"../../../../Lab.srcs/sim_1/new/Test.v" \
 "../../../../Lab.srcs/sim_1/new/keyboardTest.v" \
+"../../../../Lab.srcs/sim_1/new/testPrepared.v" \
 
 # compile glbl module
 verilog xil_defaultlib "glbl.v"
