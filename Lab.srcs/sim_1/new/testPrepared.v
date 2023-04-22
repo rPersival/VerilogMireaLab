@@ -34,14 +34,9 @@ begin
     @(posedge clock);
     @(posedge clock);
     
-    #(2 * clockPeriod) scancode = hexCoder(1);
-    pressKey(scancode);
-    #(2 * clockPeriod) scancode = hexCoder(4'hF);
+    #(2 * clockPeriod) scancode = hexCoder(4'h1);
     pressKey(scancode);
     #(2 * clockPeriod) scancode = enterCode;
-    pressKey(scancode);
-    
-    #(2 * clockPeriod) scancode = hexCoder(1);
     pressKey(scancode);
     #(2 * clockPeriod) scancode = hexCoder(4'hF);
     pressKey(scancode);

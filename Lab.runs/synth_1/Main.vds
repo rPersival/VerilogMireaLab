@@ -2,17 +2,17 @@
 # Vivado v2022.1 (64-bit)
 # SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
 # IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
-# Start of session at: Tue Apr 18 19:08:25 2023
-# Process ID: 16428
-# Current directory: D:/Vivado_projects/VerilogMireaLab/Lab.runs/synth_1
+# Start of session at: Sat Apr 22 17:35:26 2023
+# Process ID: 5464
+# Current directory: D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.runs/synth_1
 # Command line: vivado.exe -log Main.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Main.tcl
-# Log file: D:/Vivado_projects/VerilogMireaLab/Lab.runs/synth_1/Main.vds
-# Journal file: D:/Vivado_projects/VerilogMireaLab/Lab.runs/synth_1\vivado.jou
+# Log file: D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.runs/synth_1/Main.vds
+# Journal file: D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.runs/synth_1\vivado.jou
 # Running On: LAPTOP-N1U65B11, OS: Windows, CPU Frequency: 2419 MHz, CPU Physical cores: 4, Host memory: 8379 MB
 #-----------------------------------------------------------
 source Main.tcl -notrace
-Command: read_checkpoint -incremental D:/Vivado_projects/VerilogMireaLab/Lab.srcs/utils_1/imports/synth_1/Main.dcp
-INFO: [Vivado 12-5825] Read reference checkpoint from D:/Vivado_projects/VerilogMireaLab/Lab.srcs/utils_1/imports/synth_1/Main.dcp for incremental synthesis
+Command: read_checkpoint -incremental D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.srcs/utils_1/imports/synth_1/Main.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.srcs/utils_1/imports/synth_1/Main.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
 Command: synth_design -top Main -part xc7a100tcsg324-1
 Starting synth_design
@@ -23,106 +23,105 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 9040
+INFO: [Synth 8-7075] Helper process launched with PID 17168
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1324.914 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 1294.117 ; gain = 0.000
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'Main' [D:/Vivado_projects/VerilogMireaLab/Lab.srcs/sources_1/new/Main.v:3]
-INFO: [Synth 8-6157] synthesizing module 'ShiftRegister' [D:/Vivado_projects/VerilogMireaLab/Lab.srcs/sources_1/new/ShiftRegister.v:3]
-WARNING: [Synth 8-6090] variable 'value' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/Vivado_projects/VerilogMireaLab/Lab.srcs/sources_1/new/ShiftRegister.v:17]
-INFO: [Synth 8-6155] done synthesizing module 'ShiftRegister' (0#1) [D:/Vivado_projects/VerilogMireaLab/Lab.srcs/sources_1/new/ShiftRegister.v:3]
-INFO: [Synth 8-6157] synthesizing module 'ClockDivider' [D:/Vivado_projects/VerilogMireaLab/Lab.srcs/sources_1/new/ClockDivider.v:3]
-	Parameter rate bound to: 40960 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'Counter' [D:/Vivado_projects/VerilogMireaLab/Lab.srcs/sources_1/new/Counter.v:3]
+INFO: [Synth 8-6157] synthesizing module 'Main' [D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.srcs/sources_1/new/Main.v:3]
+INFO: [Synth 8-6157] synthesizing module 'ShiftRegister' [D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.srcs/sources_1/new/ShiftRegister.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'ShiftRegister' (0#1) [D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.srcs/sources_1/new/ShiftRegister.v:3]
+INFO: [Synth 8-6157] synthesizing module 'ClockDivider' [D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.srcs/sources_1/new/ClockDivider.v:3]
+	Parameter rate bound to: 10240 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'Counter' [D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.srcs/sources_1/new/Counter.v:3]
 	Parameter step bound to: 1 - type: integer 
-	Parameter mod bound to: 40960 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'Counter' (0#1) [D:/Vivado_projects/VerilogMireaLab/Lab.srcs/sources_1/new/Counter.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'ClockDivider' (0#1) [D:/Vivado_projects/VerilogMireaLab/Lab.srcs/sources_1/new/ClockDivider.v:3]
-INFO: [Synth 8-6157] synthesizing module 'Filter' [D:/Vivado_projects/VerilogMireaLab/Lab.srcs/sources_1/new/Filter.v:3]
-INFO: [Synth 8-6157] synthesizing module 'Synchronization' [D:/Vivado_projects/VerilogMireaLab/Lab.srcs/sources_1/new/Synchronization.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'Synchronization' (0#1) [D:/Vivado_projects/VerilogMireaLab/Lab.srcs/sources_1/new/Synchronization.v:3]
-INFO: [Synth 8-6157] synthesizing module 'Counter__parameterized0' [D:/Vivado_projects/VerilogMireaLab/Lab.srcs/sources_1/new/Counter.v:3]
+	Parameter mod bound to: 10240 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Counter' (0#1) [D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.srcs/sources_1/new/Counter.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'ClockDivider' (0#1) [D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.srcs/sources_1/new/ClockDivider.v:3]
+INFO: [Synth 8-6157] synthesizing module 'Filter' [D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.srcs/sources_1/new/Filter.v:3]
+INFO: [Synth 8-6157] synthesizing module 'Synchronization' [D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.srcs/sources_1/new/Synchronization.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'Synchronization' (0#1) [D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.srcs/sources_1/new/Synchronization.v:3]
+INFO: [Synth 8-6157] synthesizing module 'Counter__parameterized0' [D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.srcs/sources_1/new/Counter.v:3]
 	Parameter step bound to: 1 - type: integer 
 	Parameter mod bound to: 16 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'Counter__parameterized0' (0#1) [D:/Vivado_projects/VerilogMireaLab/Lab.srcs/sources_1/new/Counter.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'Filter' (0#1) [D:/Vivado_projects/VerilogMireaLab/Lab.srcs/sources_1/new/Filter.v:3]
-INFO: [Synth 8-6157] synthesizing module 'Counter__parameterized1' [D:/Vivado_projects/VerilogMireaLab/Lab.srcs/sources_1/new/Counter.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'Counter__parameterized0' (0#1) [D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.srcs/sources_1/new/Counter.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'Filter' (0#1) [D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.srcs/sources_1/new/Filter.v:3]
+INFO: [Synth 8-6157] synthesizing module 'Counter__parameterized1' [D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.srcs/sources_1/new/Counter.v:3]
 	Parameter step bound to: 1 - type: integer 
 	Parameter mod bound to: 8 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'Counter__parameterized1' (0#1) [D:/Vivado_projects/VerilogMireaLab/Lab.srcs/sources_1/new/Counter.v:3]
-INFO: [Synth 8-6157] synthesizing module 'SegmentRegister' [D:/Vivado_projects/VerilogMireaLab/Lab.srcs/sources_1/new/SegmentRegister.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'SegmentRegister' (0#1) [D:/Vivado_projects/VerilogMireaLab/Lab.srcs/sources_1/new/SegmentRegister.v:3]
-INFO: [Synth 8-6157] synthesizing module 'AnodesMaskRegister' [D:/Vivado_projects/VerilogMireaLab/Lab.srcs/sources_1/new/AnodesMaskRegister.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'AnodesMaskRegister' (0#1) [D:/Vivado_projects/VerilogMireaLab/Lab.srcs/sources_1/new/AnodesMaskRegister.v:3]
-INFO: [Synth 8-6157] synthesizing module 'CountSort' [D:/Vivado_projects/VerilogMireaLab/Lab.srcs/sources_1/new/CountSort.v:3]
-INFO: [Synth 8-6157] synthesizing module 'Counter__parameterized2' [D:/Vivado_projects/VerilogMireaLab/Lab.srcs/sources_1/new/Counter.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'Counter__parameterized1' (0#1) [D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.srcs/sources_1/new/Counter.v:3]
+INFO: [Synth 8-6157] synthesizing module 'SegmentRegister' [D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.srcs/sources_1/new/SegmentRegister.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'SegmentRegister' (0#1) [D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.srcs/sources_1/new/SegmentRegister.v:3]
+INFO: [Synth 8-6157] synthesizing module 'AnodesMaskRegister' [D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.srcs/sources_1/new/AnodesMaskRegister.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'AnodesMaskRegister' (0#1) [D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.srcs/sources_1/new/AnodesMaskRegister.v:3]
+INFO: [Synth 8-6157] synthesizing module 'CountSort' [D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.srcs/sources_1/new/CountSort.v:3]
+INFO: [Synth 8-6157] synthesizing module 'Counter__parameterized2' [D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.srcs/sources_1/new/Counter.v:3]
 	Parameter step bound to: 1 - type: integer 
 	Parameter mod bound to: 16 - type: integer 
 	Parameter startValue bound to: 1 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'Counter__parameterized2' (0#1) [D:/Vivado_projects/VerilogMireaLab/Lab.srcs/sources_1/new/Counter.v:3]
-INFO: [Synth 8-6157] synthesizing module 'Counter__parameterized3' [D:/Vivado_projects/VerilogMireaLab/Lab.srcs/sources_1/new/Counter.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'Counter__parameterized2' (0#1) [D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.srcs/sources_1/new/Counter.v:3]
+INFO: [Synth 8-6157] synthesizing module 'Counter__parameterized3' [D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.srcs/sources_1/new/Counter.v:3]
 	Parameter step bound to: -1 - type: integer 
 	Parameter mod bound to: 16 - type: integer 
 	Parameter startValue bound to: 15 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'Counter__parameterized3' (0#1) [D:/Vivado_projects/VerilogMireaLab/Lab.srcs/sources_1/new/Counter.v:3]
-INFO: [Synth 8-155] case statement is not full and has no default [D:/Vivado_projects/VerilogMireaLab/Lab.srcs/sources_1/new/CountSort.v:34]
-INFO: [Synth 8-6155] done synthesizing module 'CountSort' (0#1) [D:/Vivado_projects/VerilogMireaLab/Lab.srcs/sources_1/new/CountSort.v:3]
-INFO: [Synth 8-6157] synthesizing module 'keyboardSymbolDecoder' [D:/Vivado_projects/VerilogMireaLab/Lab.srcs/sources_1/new/keyboardSymbolDecoder.v:3]
-INFO: [Synth 8-6157] synthesizing module 'packetHandler' [D:/Vivado_projects/VerilogMireaLab/Lab.srcs/sources_1/new/packetHandler.v:3]
-INFO: [Synth 8-155] case statement is not full and has no default [D:/Vivado_projects/VerilogMireaLab/Lab.srcs/sources_1/new/packetHandler.v:52]
-INFO: [Synth 8-6155] done synthesizing module 'packetHandler' (0#1) [D:/Vivado_projects/VerilogMireaLab/Lab.srcs/sources_1/new/packetHandler.v:3]
-INFO: [Synth 8-6157] synthesizing module 'packetDecoder' [D:/Vivado_projects/VerilogMireaLab/Lab.srcs/sources_1/new/packetDecoder.v:3]
-WARNING: [Synth 8-567] referenced signal 'numberScancodes' should be on the sensitivity list [D:/Vivado_projects/VerilogMireaLab/Lab.srcs/sources_1/new/packetDecoder.v:37]
-WARNING: [Synth 8-6090] variable 'flags' is written by both blocking and non-blocking assignments, entire logic could be removed [D:/Vivado_projects/VerilogMireaLab/Lab.srcs/sources_1/new/packetDecoder.v:75]
-WARNING: [Synth 8-567] referenced signal 'numberScancodes' should be on the sensitivity list [D:/Vivado_projects/VerilogMireaLab/Lab.srcs/sources_1/new/packetDecoder.v:64]
-INFO: [Synth 8-6155] done synthesizing module 'packetDecoder' (0#1) [D:/Vivado_projects/VerilogMireaLab/Lab.srcs/sources_1/new/packetDecoder.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'keyboardSymbolDecoder' (0#1) [D:/Vivado_projects/VerilogMireaLab/Lab.srcs/sources_1/new/keyboardSymbolDecoder.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'Main' (0#1) [D:/Vivado_projects/VerilogMireaLab/Lab.srcs/sources_1/new/Main.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'Counter__parameterized3' (0#1) [D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.srcs/sources_1/new/Counter.v:3]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.srcs/sources_1/new/CountSort.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'CountSort' (0#1) [D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.srcs/sources_1/new/CountSort.v:3]
+INFO: [Synth 8-6157] synthesizing module 'keyboardSymbolDecoder' [D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.srcs/sources_1/new/keyboardSymbolDecoder.v:3]
+INFO: [Synth 8-6157] synthesizing module 'packetHandler' [D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.srcs/sources_1/new/packetHandler.v:3]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.srcs/sources_1/new/packetHandler.v:52]
+INFO: [Synth 8-6155] done synthesizing module 'packetHandler' (0#1) [D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.srcs/sources_1/new/packetHandler.v:3]
+INFO: [Synth 8-6157] synthesizing module 'packetDecoder' [D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.srcs/sources_1/new/packetDecoder.v:3]
+WARNING: [Synth 8-567] referenced signal 'numberScancodes' should be on the sensitivity list [D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.srcs/sources_1/new/packetDecoder.v:37]
+WARNING: [Synth 8-567] referenced signal 'numberScancodes' should be on the sensitivity list [D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.srcs/sources_1/new/packetDecoder.v:66]
+INFO: [Synth 8-6155] done synthesizing module 'packetDecoder' (0#1) [D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.srcs/sources_1/new/packetDecoder.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'keyboardSymbolDecoder' (0#1) [D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.srcs/sources_1/new/keyboardSymbolDecoder.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'Main' (0#1) [D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.srcs/sources_1/new/Main.v:3]
+WARNING: [Synth 8-6014] Unused sequential element flagsDelayedKey_reg was removed.  [D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.srcs/sources_1/new/ShiftRegister.v:22]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1324.914 ; gain = 0.000
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 1294.117 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1324.914 ; gain = 0.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 1294.117 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1324.914 ; gain = 0.000
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 1294.117 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 1324.914 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 1294.117 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [D:/Vivado_projects/VerilogMireaLab/Lab.srcs/constrs_1/new/constraints.xdc]
-Finished Parsing XDC File [D:/Vivado_projects/VerilogMireaLab/Lab.srcs/constrs_1/new/constraints.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/Vivado_projects/VerilogMireaLab/Lab.srcs/constrs_1/new/constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Main_propImpl.xdc].
+Parsing XDC File [D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.srcs/constrs_1/new/constraints.xdc]
+Finished Parsing XDC File [D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.srcs/constrs_1/new/constraints.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.srcs/constrs_1/new/constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Main_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/Main_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1333.566 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1340.375 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1333.566 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1340.375 ; gain = 0.000
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:14 . Memory (MB): peak = 1333.566 ; gain = 8.652
+Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:14 . Memory (MB): peak = 1340.375 ; gain = 46.258
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:14 . Memory (MB): peak = 1333.566 ; gain = 8.652
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:14 . Memory (MB): peak = 1340.375 ; gain = 46.258
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:14 . Memory (MB): peak = 1333.566 ; gain = 8.652
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:06 ; elapsed = 00:00:14 . Memory (MB): peak = 1340.375 ; gain = 46.258
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'packetHandler'
 ---------------------------------------------------------------------------------------------------
@@ -136,15 +135,15 @@ INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'packe
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'packetHandler'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:15 . Memory (MB): peak = 1333.566 ; gain = 8.652
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:15 . Memory (MB): peak = 1340.375 ; gain = 46.258
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input   17 Bit       Adders := 1     
-	   2 Input    4 Bit       Adders := 13    
+	   2 Input   15 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 14    
 	   2 Input    3 Bit       Adders := 1     
 +---XORs : 
 	   2 Input      1 Bit         XORs := 5     
@@ -152,26 +151,25 @@ Detailed RTL Component Info :
 	                8 Bit    Wide XORs := 1     
 +---Registers : 
 	               64 Bit    Registers := 4     
-	               16 Bit    Registers := 1     
+	               14 Bit    Registers := 1     
 	                8 Bit    Registers := 3     
-	                4 Bit    Registers := 10    
+	                4 Bit    Registers := 11    
 	                3 Bit    Registers := 2     
 	                2 Bit    Registers := 2     
 	                1 Bit    Registers := 28    
 +---Muxes : 
-	   5 Input   64 Bit        Muxes := 1     
 	   6 Input   64 Bit        Muxes := 3     
-	   2 Input   60 Bit        Muxes := 1     
 	   5 Input    5 Bit        Muxes := 1     
 	   2 Input    5 Bit        Muxes := 4     
-	   2 Input    4 Bit        Muxes := 4     
+	   5 Input    4 Bit        Muxes := 1     
 	   8 Input    4 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 2     
 	  18 Input    4 Bit        Muxes := 1     
 	   2 Input    3 Bit        Muxes := 1     
-	   2 Input    2 Bit        Muxes := 5     
+	   2 Input    2 Bit        Muxes := 3     
 	   3 Input    2 Bit        Muxes := 1     
 	   5 Input    1 Bit        Muxes := 6     
-	   6 Input    1 Bit        Muxes := 3     
+	   6 Input    1 Bit        Muxes := 4     
 	   2 Input    1 Bit        Muxes := 8     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -190,25 +188,25 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:20 . Memory (MB): peak = 1333.566 ; gain = 8.652
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:22 . Memory (MB): peak = 1340.375 ; gain = 46.258
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:25 . Memory (MB): peak = 1333.566 ; gain = 8.652
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:27 . Memory (MB): peak = 1340.375 ; gain = 46.258
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:25 . Memory (MB): peak = 1333.566 ; gain = 8.652
+Finished Timing Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:27 . Memory (MB): peak = 1340.375 ; gain = 46.258
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:26 . Memory (MB): peak = 1333.566 ; gain = 8.652
+Finished Technology Mapping : Time (s): cpu = 00:00:12 ; elapsed = 00:00:28 . Memory (MB): peak = 1340.375 ; gain = 46.258
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -226,37 +224,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:22 ; elapsed = 00:00:29 . Memory (MB): peak = 1333.566 ; gain = 8.652
+Finished IO Insertion : Time (s): cpu = 00:00:14 ; elapsed = 00:00:32 . Memory (MB): peak = 1340.375 ; gain = 46.258
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:22 ; elapsed = 00:00:29 . Memory (MB): peak = 1333.566 ; gain = 8.652
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:14 ; elapsed = 00:00:32 . Memory (MB): peak = 1340.375 ; gain = 46.258
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:22 ; elapsed = 00:00:29 . Memory (MB): peak = 1333.566 ; gain = 8.652
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:14 ; elapsed = 00:00:32 . Memory (MB): peak = 1340.375 ; gain = 46.258
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:29 . Memory (MB): peak = 1333.566 ; gain = 8.652
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:14 ; elapsed = 00:00:32 . Memory (MB): peak = 1340.375 ; gain = 46.258
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:30 . Memory (MB): peak = 1333.566 ; gain = 8.652
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:32 . Memory (MB): peak = 1340.375 ; gain = 46.258
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:22 ; elapsed = 00:00:30 . Memory (MB): peak = 1333.566 ; gain = 8.652
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:14 ; elapsed = 00:00:32 . Memory (MB): peak = 1340.375 ; gain = 46.258
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -274,40 +272,40 @@ Report Cell Usage:
 +------+-------+------+
 |1     |BUFG   |     1|
 |2     |CARRY4 |    12|
-|3     |LUT1   |    23|
-|4     |LUT2   |    46|
+|3     |LUT1   |    22|
+|4     |LUT2   |    55|
 |5     |LUT3   |    54|
-|6     |LUT4   |    90|
-|7     |LUT5   |   142|
-|8     |LUT6   |   339|
-|9     |MUXF7  |    43|
-|10    |MUXF8  |    14|
-|11    |FDRE   |   368|
+|6     |LUT4   |   149|
+|7     |LUT5   |    82|
+|8     |LUT6   |   355|
+|9     |MUXF7  |    41|
+|10    |MUXF8  |    15|
+|11    |FDRE   |   374|
 |12    |FDSE   |     5|
 |13    |IBUF   |    20|
 |14    |OBUF   |    16|
 +------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:30 . Memory (MB): peak = 1333.566 ; gain = 8.652
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:14 ; elapsed = 00:00:32 . Memory (MB): peak = 1340.375 ; gain = 46.258
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:28 . Memory (MB): peak = 1333.566 ; gain = 0.000
-Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:30 . Memory (MB): peak = 1333.566 ; gain = 8.652
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:10 ; elapsed = 00:00:30 . Memory (MB): peak = 1340.375 ; gain = 0.000
+Synthesis Optimization Complete : Time (s): cpu = 00:00:14 ; elapsed = 00:00:32 . Memory (MB): peak = 1340.375 ; gain = 46.258
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 1333.566 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 69 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 1340.375 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 68 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1333.566 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1340.375 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete, checksum: 6e1163a
+Synth Design complete, checksum: 823bd4a5
 INFO: [Common 17-83] Releasing license: Synthesis
-57 Infos, 5 Warnings, 0 Critical Warnings and 0 Errors encountered.
+57 Infos, 4 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:34 . Memory (MB): peak = 1333.566 ; gain = 8.652
-INFO: [Common 17-1381] The checkpoint 'D:/Vivado_projects/VerilogMireaLab/Lab.runs/synth_1/Main.dcp' has been generated.
+synth_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:37 . Memory (MB): peak = 1340.375 ; gain = 46.258
+INFO: [Common 17-1381] The checkpoint 'D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.runs/synth_1/Main.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Main_utilization_synth.rpt -pb Main_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Apr 18 19:09:05 2023...
+INFO: [Common 17-206] Exiting Vivado at Sat Apr 22 17:36:09 2023...

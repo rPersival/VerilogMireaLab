@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:D:/Vivado_projects/VerilogMireaLab/Lab.srcs/constrs_1/new/constraints.xdc rfile:../../../Lab.srcs/constrs_1/new/constraints.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.srcs/constrs_1/new/constraints.xdc rfile:../../../Lab.srcs/constrs_1/new/constraints.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:2 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { IOSTANDARD LVCMOS33 PACKAGE_PIN F4 } [ get_ports { keyboardClock } ]
 set_property src_info {type:XDC file:1 line:3 export:INPUT save:INPUT read:READ} [current_design]

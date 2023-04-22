@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-| Date         : Tue Apr 18 19:10:12 2023
+| Date         : Sat Apr 22 17:37:16 2023
 | Host         : LAPTOP-N1U65B11 running 64-bit major release  (build 9200)
 | Command      : report_methodology -file Main_methodology_drc_routed.rpt -pb Main_methodology_drc_routed.pb -rpx Main_methodology_drc_routed.rpx
 | Design       : Main
@@ -23,11 +23,11 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 48
+             Violations found: 49
 +-----------+------------------+-------------------------------+------------+
 | Rule      | Severity         | Description                   | Violations |
 +-----------+------------------+-------------------------------+------------+
-| TIMING-17 | Critical Warning | Non-clocked sequential cell   | 37         |
+| TIMING-17 | Critical Warning | Non-clocked sequential cell   | 38         |
 | TIMING-18 | Warning          | Missing input or output delay | 11         |
 +-----------+------------------+-------------------------------+------------+
 
@@ -95,125 +95,130 @@ Related violations: <none>
 
 TIMING-17#13 Critical Warning
 Non-clocked sequential cell  
-The clock pin flagsDelayed_reg/C is not reached by a timing clock
+The clock pin segmentRegister/tempSegmentReg_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#14 Critical Warning
 Non-clocked sequential cell  
-The clock pin segmentRegister/tempSegmentReg_reg[0]/C is not reached by a timing clock
+The clock pin segmentRegister/tempSegmentReg_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#15 Critical Warning
 Non-clocked sequential cell  
-The clock pin segmentRegister/tempSegmentReg_reg[1]/C is not reached by a timing clock
+The clock pin segmentRegister/tempSegmentReg_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#16 Critical Warning
 Non-clocked sequential cell  
-The clock pin segmentRegister/tempSegmentReg_reg[2]/C is not reached by a timing clock
+The clock pin segmentRegister/tempSegmentReg_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#17 Critical Warning
 Non-clocked sequential cell  
-The clock pin segmentRegister/tempSegmentReg_reg[3]/C is not reached by a timing clock
+The clock pin segmentRegister/tempSegmentReg_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#18 Critical Warning
 Non-clocked sequential cell  
-The clock pin segmentRegister/tempSegmentReg_reg[4]/C is not reached by a timing clock
+The clock pin segmentRegister/tempSegmentReg_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#19 Critical Warning
 Non-clocked sequential cell  
-The clock pin segmentRegister/tempSegmentReg_reg[5]/C is not reached by a timing clock
+The clock pin segmentRegister/tempSegmentReg_reg[6]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#20 Critical Warning
 Non-clocked sequential cell  
-The clock pin segmentRegister/tempSegmentReg_reg[6]/C is not reached by a timing clock
+The clock pin symbolDecoder/handler/FSM_onehot_state_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#21 Critical Warning
 Non-clocked sequential cell  
-The clock pin symbolDecoder/handler/FSM_onehot_state_reg[0]/C is not reached by a timing clock
+The clock pin symbolDecoder/handler/FSM_onehot_state_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#22 Critical Warning
 Non-clocked sequential cell  
-The clock pin symbolDecoder/handler/FSM_onehot_state_reg[1]/C is not reached by a timing clock
+The clock pin symbolDecoder/handler/FSM_onehot_state_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#23 Critical Warning
 Non-clocked sequential cell  
-The clock pin symbolDecoder/handler/FSM_onehot_state_reg[2]/C is not reached by a timing clock
+The clock pin symbolDecoder/handler/FSM_onehot_state_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#24 Critical Warning
 Non-clocked sequential cell  
-The clock pin symbolDecoder/handler/FSM_onehot_state_reg[3]/C is not reached by a timing clock
+The clock pin symbolDecoder/handler/FSM_onehot_state_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#25 Critical Warning
 Non-clocked sequential cell  
-The clock pin symbolDecoder/handler/FSM_onehot_state_reg[4]/C is not reached by a timing clock
+The clock pin symbolDecoder/handler/counter_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#26 Critical Warning
 Non-clocked sequential cell  
-The clock pin symbolDecoder/handler/counter_reg[0]/C is not reached by a timing clock
+The clock pin symbolDecoder/handler/counter_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#27 Critical Warning
 Non-clocked sequential cell  
-The clock pin symbolDecoder/handler/counter_reg[1]/C is not reached by a timing clock
+The clock pin symbolDecoder/handler/counter_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#28 Critical Warning
 Non-clocked sequential cell  
-The clock pin symbolDecoder/handler/counter_reg[2]/C is not reached by a timing clock
+The clock pin symbolDecoder/handler/counter_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#29 Critical Warning
 Non-clocked sequential cell  
-The clock pin symbolDecoder/handler/counter_reg[3]/C is not reached by a timing clock
+The clock pin symbolDecoder/handler/error_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#30 Critical Warning
 Non-clocked sequential cell  
-The clock pin symbolDecoder/handler/keyboardDataBuffer_reg[0]/C is not reached by a timing clock
+The clock pin symbolDecoder/handler/isReadyOutput_reg/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#31 Critical Warning
 Non-clocked sequential cell  
-The clock pin symbolDecoder/handler/keyboardDataBuffer_reg[1]/C is not reached by a timing clock
+The clock pin symbolDecoder/handler/keyboardDataBuffer_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#32 Critical Warning
 Non-clocked sequential cell  
-The clock pin symbolDecoder/handler/keyboardDataBuffer_reg[2]/C is not reached by a timing clock
+The clock pin symbolDecoder/handler/keyboardDataBuffer_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#33 Critical Warning
 Non-clocked sequential cell  
-The clock pin symbolDecoder/handler/keyboardDataBuffer_reg[3]/C is not reached by a timing clock
+The clock pin symbolDecoder/handler/keyboardDataBuffer_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#34 Critical Warning
 Non-clocked sequential cell  
-The clock pin symbolDecoder/handler/keyboardDataBuffer_reg[4]/C is not reached by a timing clock
+The clock pin symbolDecoder/handler/keyboardDataBuffer_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#35 Critical Warning
 Non-clocked sequential cell  
-The clock pin symbolDecoder/handler/keyboardDataBuffer_reg[5]/C is not reached by a timing clock
+The clock pin symbolDecoder/handler/keyboardDataBuffer_reg[4]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#36 Critical Warning
 Non-clocked sequential cell  
-The clock pin symbolDecoder/handler/keyboardDataBuffer_reg[6]/C is not reached by a timing clock
+The clock pin symbolDecoder/handler/keyboardDataBuffer_reg[5]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#37 Critical Warning
+Non-clocked sequential cell  
+The clock pin symbolDecoder/handler/keyboardDataBuffer_reg[6]/C is not reached by a timing clock
+Related violations: <none>
+
+TIMING-17#38 Critical Warning
 Non-clocked sequential cell  
 The clock pin symbolDecoder/handler/keyboardDataBuffer_reg[7]/C is not reached by a timing clock
 Related violations: <none>

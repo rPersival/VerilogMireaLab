@@ -78,6 +78,7 @@ begin
             if (!keyboardData)
                 error <= 1;
             isReadyOutput <= 1;
+            //keyboardDataBuffer = 8'h0;
             state = startBitExpectation;
         end
         
@@ -87,6 +88,7 @@ begin
             begin
                 error <= 1;
                 isReadyOutput <= 1;
+                //keyboardDataBuffer = 8'h0;
                 state = startBitExpectation;
             end
         end

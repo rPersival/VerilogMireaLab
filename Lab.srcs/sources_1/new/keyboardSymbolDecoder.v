@@ -7,15 +7,17 @@ module keyboardSymbolDecoder
     input keyboardData,
     
     output reg isReadyOutput,
+    output isKeyboardReadyOutput,
     output[3:0] out,
-    output[1:0] flags
+    output[1:0] flags,
+    output keyReleasedFlag
 );
 
 parameter setSignalExpectation = 0;
 parameter resetSignalExpectation = 1;
 reg state;
 
-wire keyboardIsReadyOutput, keyboardError;
+wire isKeyboardReadyOutputH, keyboardError;
 wire[7:0] keyboardOut;
 
 reg releaseFlag;
@@ -31,7 +33,7 @@ begin
     case(state)
         setSignalExpectation:
         begin
-            if (keyboardIsReadyOutput)
+            if (isKeyboardReadyOutputH)
             begin
                 if (!keyboardError)
                 begin
@@ -49,13 +51,17 @@ begin
         resetSignalExpectation:
         begin
             isReadyOutput <= 0;
-            if (!keyboardIsReadyOutput)
+            if (!isKeyboardReadyOutputH)
                 state <= setSignalExpectation;
         end
     endcase
 end
 
-packetHandler handler(.clock(clock), .keyboardClock(keyboardClock), .keyboardData(keyboardData), .out(keyboardOut), .isReadyOutput(keyboardIsReadyOutput), .error(keyboardError));
+assign keyReleasedFlag = releaseFlag;
+assign isKeyboardReadyOutput = isKeyboardReadyOutputH;
+
+packetHandler handler(.clock(clock), .keyboardClock(keyboardClock), .keyboardData(keyboardData),
+                    .out(keyboardOut), .isReadyOutput(isKeyboardReadyOutputH), .error(keyboardError));
 packetDecoder decoder(.scancode(keyboardOut), .out(out), .flags(flags));
 
 endmodule

@@ -17,7 +17,7 @@ proc create_report { reportName command } {
   }
 }
 namespace eval ::optrace {
-  variable script "D:/Vivado_projects/VerilogMireaLab/Lab.runs/impl_1/Main.tcl"
+  variable script "D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.runs/impl_1/Main.tcl"
   variable category "vivado_impl"
 }
 
@@ -129,15 +129,15 @@ OPTRACE "create in-memory project" START { }
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
-  set_property webtalk.parent_dir D:/Vivado_projects/VerilogMireaLab/Lab.cache/wt [current_project]
-  set_property parent.project_path D:/Vivado_projects/VerilogMireaLab/Lab.xpr [current_project]
-  set_property ip_output_repo D:/Vivado_projects/VerilogMireaLab/Lab.cache/ip [current_project]
+  set_property webtalk.parent_dir D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.cache/wt [current_project]
+  set_property parent.project_path D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.xpr [current_project]
+  set_property ip_output_repo {{D:/Vivado_projects/VerilogMireaLab 18.04.2023/Lab.cache/ip}} [current_project]
   set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
-  add_files -quiet D:/Vivado_projects/VerilogMireaLab/Lab.runs/synth_1/Main.dcp
+  add_files -quiet D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.runs/synth_1/Main.dcp
 OPTRACE "read constraints: implementation" START { }
-  read_xdc D:/Vivado_projects/VerilogMireaLab/Lab.srcs/constrs_1/new/constraints.xdc
+  read_xdc D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.srcs/constrs_1/new/constraints.xdc
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "add files" END { }
 OPTRACE "link_design" START { }

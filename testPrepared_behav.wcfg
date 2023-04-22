@@ -12,14 +12,14 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0.000000 us"></ZoomStartTime>
-      <ZoomEndTime time="8.500001 us"></ZoomEndTime>
-      <Cursor1Time time="8.500000 us"></Cursor1Time>
+      <ZoomEndTime time="7.490001 us"></ZoomEndTime>
+      <Cursor1Time time="7.490000 us"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="331"></NameColumnWidth>
-      <ValueColumnWidth column_width="90"></ValueColumnWidth>
+      <NameColumnWidth column_width="297"></NameColumnWidth>
+      <ValueColumnWidth column_width="72"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="10" />
+   <WVObjectSize size="14" />
    <wvobject fp_name="/testPrepared/main/symbolDecoder/keyboardData" type="logic">
       <obj_property name="DisplayName">label</obj_property>
       <obj_property name="ElementShortName">keyboardData</obj_property>
@@ -31,6 +31,19 @@
       <obj_property name="ElementShortName">keyboardData</obj_property>
       <obj_property name="ObjectShortName">keyboardData</obj_property>
       <obj_property name="label">keyboardData packetHandler</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testPrepared/main/symbolDecoder/handler/keyboardDataSyncronized" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">keyboardDataSyncronized[1:0]</obj_property>
+      <obj_property name="ObjectShortName">keyboardDataSyncronized[1:0]</obj_property>
+      <obj_property name="label">keyboardDataSyncronized[1:0] packetHandler</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testPrepared/main/symbolDecoder/handler/keyboardDataBuffer" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">keyboardDataBuffer[7:0]</obj_property>
+      <obj_property name="ObjectShortName">keyboardDataBuffer[7:0]</obj_property>
+      <obj_property name="label">keyboardDataBuffer[7:0] packetHandler</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/testPrepared/main/symbolDecoder/handler/out" type="array">
       <obj_property name="DisplayName">label</obj_property>
@@ -44,6 +57,7 @@
       <obj_property name="ElementShortName">scancode[7:0]</obj_property>
       <obj_property name="ObjectShortName">scancode[7:0]</obj_property>
       <obj_property name="label">scancode[7:0] packetDecoder in   &lt;- R1</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/testPrepared/main/symbolDecoder/decoder/out" type="array">
       <obj_property name="DisplayName">label</obj_property>
@@ -73,10 +87,19 @@
    <wvobject fp_name="/testPrepared/main/shiftRegister/inputBuffer" type="array">
       <obj_property name="ElementShortName">inputBuffer[3:0]</obj_property>
       <obj_property name="ObjectShortName">inputBuffer[3:0]</obj_property>
-      <obj_property name="isExpanded"></obj_property>
    </wvobject>
    <wvobject fp_name="/testPrepared/main/shiftRegister/innerBus" type="array">
       <obj_property name="ElementShortName">innerBus[63:0]</obj_property>
       <obj_property name="ObjectShortName">innerBus[63:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testPrepared/main/symbolDecoder/keyReleasedFlag" type="logic">
+      <obj_property name="ElementShortName">keyReleasedFlag</obj_property>
+      <obj_property name="ObjectShortName">keyReleasedFlag</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testPrepared/main/shiftRegister/isKeyboardReadyOutput" type="logic">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">isKeyboardReadyOutput</obj_property>
+      <obj_property name="ObjectShortName">isKeyboardReadyOutput</obj_property>
+      <obj_property name="label">isKeyboardReadyOutput shiftRegister in</obj_property>
    </wvobject>
 </wave_config>
