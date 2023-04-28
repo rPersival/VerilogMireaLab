@@ -10,7 +10,8 @@ module keyboardSymbolDecoder
     output isKeyboardReadyOutput,
     output[3:0] out,
     output[1:0] flags,
-    output keyReleasedFlag
+    output keyReleasedFlag,
+    output rButtonFlagH
 );
 
 parameter setSignalExpectation = 0;
@@ -21,6 +22,8 @@ wire isKeyboardReadyOutputH, keyboardError;
 wire[7:0] keyboardOut;
 
 reg releaseFlag;
+
+wire rButtonFlag;
 
 initial
 begin
@@ -58,10 +61,12 @@ begin
 end
 
 assign keyReleasedFlag = releaseFlag;
+assign rButtonFlagH = rButtonFlag;
+
 assign isKeyboardReadyOutput = isKeyboardReadyOutputH;
 
 packetHandler handler(.clock(clock), .keyboardClock(keyboardClock), .keyboardData(keyboardData),
                     .out(keyboardOut), .isReadyOutput(isKeyboardReadyOutputH), .error(keyboardError));
-packetDecoder decoder(.scancode(keyboardOut), .out(out), .flags(flags));
+packetDecoder decoder(.scancode(keyboardOut), .out(out), .flags(flags), .rButtonFlagD(rButtonFlag));
 
 endmodule

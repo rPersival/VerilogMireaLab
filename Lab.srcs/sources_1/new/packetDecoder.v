@@ -4,11 +4,13 @@ module packetDecoder
 (
     input[7:0] scancode,
     output reg[3:0] out,
-    output reg[1:0] flags
+    output reg[1:0] flags,
+    output reg rButtonFlagD
 );
 
 reg[7:0] numberScancodes [0:15];
 parameter[7:0] enterScancode = 8'h5A;
+parameter[7:0] rButtonScancode = 8'h2D;
 parameter numberFlag = 0, enterFlag = 1;
 
 initial
@@ -32,6 +34,7 @@ begin
 
     out = 0;
     flags = 0;
+    rButtonFlagD = 0;
 end
 
 always@ (scancode)
@@ -72,11 +75,14 @@ begin
         numberScancodes[12], numberScancodes[13], numberScancodes[14], numberScancodes[15]:
             flags <= 1 << numberFlag;
         enterScancode:
-        begin
             flags <= 1 << enterFlag;
-        end
+        rButtonScancode:
+            rButtonFlagD <= 1;
         default:
+        begin
             flags <= 0;
+            rButtonFlagD <= 0;
+        end
     endcase
 end
 

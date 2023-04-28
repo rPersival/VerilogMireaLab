@@ -25,6 +25,7 @@ wire[3:0] keyboardOut;
 wire outClock;
 wire[1:0] flags;
 wire keyReleasedFlag;
+wire rButtonFlag;
 
 wire bottomSignalButton;
 wire topSignalButton;
@@ -48,7 +49,7 @@ wire topSignalRightButton;
 //                                .rightButton(bottomSignalRightButton && topSignalRightButton), .tempDigits(tempDigits), .isReadyOutput(isReadyOutput), .out(outDigits), .innerBus(innerBus));
 
 //Keyboard input
-ShiftRegister shiftRegister(.clock(clock), .inp(inp), .inpKeyboard(keyboardOut), .isResetted(bottomSignalResetButton && topSignalResetButton), .keyReleasedFlag(keyReleasedFlag), .inputFlags(flags), .inputButton(bottomSignalButton && topSignalButton), .leftButton(bottomSignalLeftButton && topSignalLeftButton),
+ShiftRegister shiftRegister(.clock(clock), .inp(inp), .inpKeyboard(keyboardOut), .isResetted(bottomSignalResetButton && topSignalResetButton), .keyReleasedFlag(keyReleasedFlag), .inputFlags(flags), .rButtonFlagS(rButtonFlag), .inputButton(bottomSignalButton && topSignalButton), .leftButton(bottomSignalLeftButton && topSignalLeftButton),
                                 .rightButton(bottomSignalRightButton && topSignalRightButton), .tempDigits(tempDigits), .isReadyOutput(isReadyOutput), .isKeyboardReadyOutput(isKeyboardReadyOutput), .out(outDigits), .innerBus(innerBus));
 
 ClockDivider #(10240) divider(.clock(clock), .outClock(outClock));
@@ -70,6 +71,6 @@ CountSort countSort(.clock(clock), .value(innerBus), .isReadyInput(bottomSignalS
    .isResetted(bottomSignalResetButton && topSignalResetButton), .isReadyOutput(isReadyOutput), .outValue(tempDigits));
 
 keyboardSymbolDecoder symbolDecoder(.clock(clock), .keyboardClock(keyboardClock), .keyboardData(keyboardData),
-    .isReadyOutput(isDecoderReadyOutput), .isKeyboardReadyOutput(isKeyboardReadyOutput), .out(keyboardOut), .flags(flags), .keyReleasedFlag(keyReleasedFlag));
+    .isReadyOutput(isDecoderReadyOutput), .isKeyboardReadyOutput(isKeyboardReadyOutput), .out(keyboardOut), .flags(flags), .keyReleasedFlag(keyReleasedFlag), .rButtonFlagH(rButtonFlag));
 
 endmodule

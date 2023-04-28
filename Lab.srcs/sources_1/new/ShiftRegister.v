@@ -1,27 +1,23 @@
 `timescale 1ns / 1ps
 
-module ShiftRegister(input clock, input[3:0] inp, input[3:0] inpKeyboard, input isResetted, input keyReleasedFlag, input[1:0] inputFlags, input inputButton, input leftButton, input rightButton,
+module ShiftRegister(input clock, input[3:0] inp, input[3:0] inpKeyboard, input isResetted, input keyReleasedFlag, input[1:0] inputFlags, input rButtonFlagS, input inputButton, input leftButton, input rightButton,
         input[63:0] tempDigits, input isReadyOutput, input isKeyboardReadyOutput, output[31:0] out, output[63:0] innerBus);
 
 reg[63:0] value = 64'h123456789ABCDEF;
 reg[3:0] pos = 4'h8;
 reg flagsDelayed = 0;
-reg flagsDelayedKey;
-reg[3:0] inputBuffer = 4'hB;
-
-always@(posedge clock)
-begin
-    //if (inputFlags[0] && ~ flagsDelayedKey)
-    if (inputFlags[0] && isKeyboardReadyOutput)
-        inputBuffer = inpKeyboard;
-end
+reg flagsDelayedKey = 0;
+reg rButtonFlagDelayed = 0;
+reg[3:0] inputBuffer = 4'h0;
 
 always@ (posedge clock)
 begin
+    if (inputFlags[0] && isKeyboardReadyOutput)
+            inputBuffer = inpKeyboard;
     flagsDelayed <= inputFlags[1];
     flagsDelayedKey <= inputFlags[0];
-//    keyReleasedFlagDelayed <= keyReleasedFlag;
-    if (isResetted == 1)
+    rButtonFlagDelayed <= rButtonFlagS;
+    if (isResetted == 1 || (rButtonFlagS && ~rButtonFlagDelayed) == 1 && keyReleasedFlag == 1)
         begin
             value <= 64'h123456789ABCDEF;
             pos <= 4'h8;

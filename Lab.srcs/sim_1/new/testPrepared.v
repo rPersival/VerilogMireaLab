@@ -4,6 +4,7 @@ module testPrepared();
 
 parameter enterCode = 8'h5A;
 parameter stopCode = 8'hF0;
+parameter rButtonCode = 8'h2D;
 
 parameter clockPeriod = 10;
 parameter keyboardClockPeriod = 40;
@@ -41,6 +42,8 @@ begin
     #(2 * clockPeriod) scancode = hexCoder(4'hF);
     pressKey(scancode);
     #(2 * clockPeriod) scancode = enterCode;
+    pressKey(scancode);
+    #(2 * clockPeriod) scancode = rButtonCode;
     pressKey(scancode);
     
     #(2 * clockPeriod)
