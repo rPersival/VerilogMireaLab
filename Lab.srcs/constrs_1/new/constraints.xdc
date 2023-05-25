@@ -2,6 +2,29 @@
 set_property -dict { IOSTANDARD LVCMOS33 PACKAGE_PIN F4 } [ get_ports { keyboardClock } ]
 set_property -dict { IOSTANDARD LVCMOS33 PACKAGE_PIN B2 } [ get_ports { keyboardData } ]
 
+set_property -dict { IOSTANDARD LVCMOS33 PACKAGE_PIN C4 } [ get_ports { rxIn } ]
+set_property -dict { IOSTANDARD LVCMOS33 PACKAGE_PIN D4 } [ get_ports { Output_UART_TX_DataBit } ]
+
+# DebugLeds
+set_property -dict { IOSTANDARD LVCMOS33 PACKAGE_PIN H17 } [ get_ports { Output_DebugLed[0] } ]
+set_property -dict { IOSTANDARD LVCMOS33 PACKAGE_PIN K15 } [ get_ports { Output_DebugLed[1] } ]
+set_property -dict { IOSTANDARD LVCMOS33 PACKAGE_PIN J13 } [ get_ports { Output_DebugLed[2] } ]
+set_property -dict { IOSTANDARD LVCMOS33 PACKAGE_PIN N14 } [ get_ports { Output_DebugLed[3] } ]
+set_property -dict { IOSTANDARD LVCMOS33 PACKAGE_PIN R18 } [ get_ports { Output_DebugLed[4] } ]
+
+set_property -dict { IOSTANDARD LVCMOS33 PACKAGE_PIN V17 } [ get_ports { Output_DebugLed[5] } ]
+set_property -dict { IOSTANDARD LVCMOS33 PACKAGE_PIN U17 } [ get_ports { Output_DebugLed[6] } ]
+set_property -dict { IOSTANDARD LVCMOS33 PACKAGE_PIN U16 } [ get_ports { Output_DebugLed[7] } ]
+set_property -dict { IOSTANDARD LVCMOS33 PACKAGE_PIN V16 } [ get_ports { Output_DebugLed[8] } ]
+set_property -dict { IOSTANDARD LVCMOS33 PACKAGE_PIN T15 } [ get_ports { Output_DebugLed[9] } ]
+
+set_property -dict { IOSTANDARD LVCMOS33 PACKAGE_PIN U14 } [ get_ports { Output_DebugLed[10] } ]
+set_property -dict { IOSTANDARD LVCMOS33 PACKAGE_PIN T16 } [ get_ports { Output_DebugLed[11] } ]
+set_property -dict { IOSTANDARD LVCMOS33 PACKAGE_PIN V15 } [ get_ports { Output_DebugLed[12] } ]
+set_property -dict { IOSTANDARD LVCMOS33 PACKAGE_PIN V14 } [ get_ports { Output_DebugLed[13] } ]
+set_property -dict { IOSTANDARD LVCMOS33 PACKAGE_PIN V12 } [ get_ports { Output_DebugLed[14] } ]
+set_property -dict { IOSTANDARD LVCMOS33 PACKAGE_PIN V11 } [ get_ports { Output_DebugLed[15] } ]
+
 # Switches
 set_property IOSTANDARD LVCMOS33 [ get_ports { inp } ]
 
