@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-| Date         : Tue May 23 20:25:59 2023
+| Date         : Thu May 25 18:57:06 2023
 | Host         : LAPTOP-N1U65B11 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file Main_utilization_synth.rpt -pb Main_utilization_synth.pb
 | Design       : Main
@@ -31,13 +31,13 @@ Table of Contents
 +-------------------------+------+-------+------------+-----------+-------+
 |        Site Type        | Used | Fixed | Prohibited | Available | Util% |
 +-------------------------+------+-------+------------+-----------+-------+
-| Slice LUTs*             |  883 |     0 |          0 |     63400 |  1.39 |
-|   LUT as Logic          |  883 |     0 |          0 |     63400 |  1.39 |
+| Slice LUTs*             | 1141 |     0 |          0 |     63400 |  1.80 |
+|   LUT as Logic          | 1141 |     0 |          0 |     63400 |  1.80 |
 |   LUT as Memory         |    0 |     0 |          0 |     19000 |  0.00 |
-| Slice Registers         |  591 |     0 |          0 |    126800 |  0.47 |
-|   Register as Flip Flop |  582 |     0 |          0 |    126800 |  0.46 |
+| Slice Registers         |  935 |     0 |          0 |    126800 |  0.74 |
+|   Register as Flip Flop |  926 |     0 |          0 |    126800 |  0.73 |
 |   Register as Latch     |    9 |     0 |          0 |    126800 | <0.01 |
-| F7 Muxes                |   48 |     0 |          0 |     31700 |  0.15 |
+| F7 Muxes                |   61 |     0 |          0 |     31700 |  0.19 |
 | F8 Muxes                |   13 |     0 |          0 |     15850 |  0.08 |
 +-------------------------+------+-------+------------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
@@ -57,8 +57,8 @@ Table of Contents
 | 0     |          Yes |           - |            - |
 | 7     |          Yes |           - |          Set |
 | 16    |          Yes |           - |        Reset |
-| 5     |          Yes |         Set |            - |
-| 563   |          Yes |       Reset |            - |
+| 7     |          Yes |         Set |            - |
+| 905   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -78,11 +78,12 @@ Table of Contents
 3. DSP
 ------
 
-+-----------+------+-------+------------+-----------+-------+
-| Site Type | Used | Fixed | Prohibited | Available | Util% |
-+-----------+------+-------+------------+-----------+-------+
-| DSPs      |    0 |     0 |          0 |       240 |  0.00 |
-+-----------+------+-------+------------+-----------+-------+
++----------------+------+-------+------------+-----------+-------+
+|    Site Type   | Used | Fixed | Prohibited | Available | Util% |
++----------------+------+-------+------------+-----------+-------+
+| DSPs           |    1 |     0 |          0 |       240 |  0.42 |
+|   DSP48E1 only |    1 |       |            |           |       |
++----------------+------+-------+------------+-----------+-------+
 
 
 4. IO and GT Specific
@@ -91,7 +92,7 @@ Table of Contents
 +-----------------------------+------+-------+------------+-----------+-------+
 |          Site Type          | Used | Fixed | Prohibited | Available | Util% |
 +-----------------------------+------+-------+------------+-----------+-------+
-| Bonded IOB                  |   54 |     0 |          0 |       210 | 25.71 |
+| Bonded IOB                  |   68 |     0 |          0 |       210 | 32.38 |
 | Bonded IPADs                |    0 |     0 |          0 |         2 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |          0 |         6 |  0.00 |
 | PHASER_REF                  |    0 |     0 |          0 |         6 |  0.00 |
@@ -113,7 +114,7 @@ Table of Contents
 +------------+------+-------+------------+-----------+-------+
 |  Site Type | Used | Fixed | Prohibited | Available | Util% |
 +------------+------+-------+------------+-----------+-------+
-| BUFGCTRL   |    1 |     0 |          0 |        32 |  3.13 |
+| BUFGCTRL   |    2 |     0 |          0 |        32 |  6.25 |
 | BUFIO      |    0 |     0 |          0 |        24 |  0.00 |
 | MMCME2_ADV |    0 |     0 |          0 |         6 |  0.00 |
 | PLLE2_ADV  |    0 |     0 |          0 |         6 |  0.00 |
@@ -147,33 +148,36 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     |  563 |        Flop & Latch |
-| LUT6     |  525 |                 LUT |
-| LUT4     |  179 |                 LUT |
-| LUT5     |  140 |                 LUT |
-| LUT2     |   79 |                 LUT |
-| LUT3     |   60 |                 LUT |
-| MUXF7    |   48 |               MuxFx |
-| CARRY4   |   39 |          CarryLogic |
-| LUT1     |   31 |                 LUT |
-| OBUF     |   30 |                  IO |
+| FDRE     |  905 |        Flop & Latch |
+| LUT6     |  672 |                 LUT |
+| LUT5     |  264 |                 LUT |
+| LUT4     |  162 |                 LUT |
+| LUT2     |  130 |                 LUT |
+| LUT3     |  112 |                 LUT |
+| MUXF7    |   61 |               MuxFx |
+| CARRY4   |   54 |          CarryLogic |
+| OBUF     |   44 |                  IO |
+| LUT1     |   39 |                 LUT |
 | IBUF     |   21 |                  IO |
 | MUXF8    |   13 |               MuxFx |
 | LDCE     |    9 |        Flop & Latch |
+| FDSE     |    7 |        Flop & Latch |
 | FDPE     |    7 |        Flop & Latch |
 | FDCE     |    7 |        Flop & Latch |
-| FDSE     |    5 |        Flop & Latch |
 | OBUFT    |    3 |                  IO |
-| BUFG     |    1 |               Clock |
+| BUFG     |    2 |               Clock |
+| DSP48E1  |    1 |    Block Arithmetic |
 +----------+------+---------------------+
 
 
 8. Black Boxes
 --------------
 
-+----------+------+
-| Ref Name | Used |
-+----------+------+
++---------------+------+
+|    Ref Name   | Used |
++---------------+------+
+| blk_mem_gen_0 |    1 |
++---------------+------+
 
 
 9. Instantiated Netlists

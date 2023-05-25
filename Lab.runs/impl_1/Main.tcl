@@ -17,7 +17,7 @@ proc create_report { reportName command } {
   }
 }
 namespace eval ::optrace {
-  variable script "D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.runs/impl_1/Main.tcl"
+  variable script "D:/Vivado_projects/Task_5_try/VerilogMireaLab/Lab.runs/impl_1/Main.tcl"
   variable category "vivado_impl"
 }
 
@@ -130,15 +130,17 @@ OPTRACE "create in-memory project" START { }
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
-  set_property webtalk.parent_dir D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.cache/wt [current_project]
-  set_property parent.project_path D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.xpr [current_project]
+  set_property webtalk.parent_dir D:/Vivado_projects/Task_5_try/VerilogMireaLab/Lab.cache/wt [current_project]
+  set_property parent.project_path D:/Vivado_projects/Task_5_try/VerilogMireaLab/Lab.xpr [current_project]
   set_property ip_output_repo {{D:/Vivado_projects/VerilogMireaLab 18.04.2023/Lab.cache/ip}} [current_project]
   set_property ip_cache_permissions {read write} [current_project]
+  set_property XPM_LIBRARIES XPM_MEMORY [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
-  add_files -quiet D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.runs/synth_1/Main.dcp
+  add_files -quiet D:/Vivado_projects/Task_5_try/VerilogMireaLab/Lab.runs/synth_1/Main.dcp
+  read_ip -quiet D:/Vivado_projects/Task_5_try/VerilogMireaLab/Lab.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci
 OPTRACE "read constraints: implementation" START { }
-  read_xdc D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/constrs_1/new/constraints.xdc
+  read_xdc D:/Vivado_projects/Task_5_try/VerilogMireaLab/Lab.srcs/constrs_1/new/constraints.xdc
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "add files" END { }
 OPTRACE "link_design" START { }
@@ -303,6 +305,7 @@ set rc [catch {
   create_msg_db write_bitstream.pb
 OPTRACE "read constraints: write_bitstream" START { }
 OPTRACE "read constraints: write_bitstream" END { }
+  set_property XPM_LIBRARIES XPM_MEMORY [current_project]
   catch { write_mem_info -force -no_partial_mmi Main.mmi }
 OPTRACE "write_bitstream setup" END { }
 OPTRACE "write_bitstream" START { }

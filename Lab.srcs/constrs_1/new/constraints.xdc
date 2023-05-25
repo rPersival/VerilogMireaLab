@@ -5,6 +5,22 @@ set_property -dict { IOSTANDARD LVCMOS33 PACKAGE_PIN B2 } [ get_ports { keyboard
 set_property -dict { IOSTANDARD LVCMOS33 PACKAGE_PIN C4 } [ get_ports { rxIn } ]
 set_property -dict { IOSTANDARD LVCMOS33 PACKAGE_PIN D4 } [ get_ports { Output_UART_TX_DataBit } ]
 
+# VGA
+set_property -dict { IOSTANDARD LVCMOS33 PACKAGE_PIN A3 } [ get_ports { Output_VGA_RED[0] } ]
+set_property -dict { IOSTANDARD LVCMOS33 PACKAGE_PIN B4 } [ get_ports { Output_VGA_RED[1] } ]
+set_property -dict { IOSTANDARD LVCMOS33 PACKAGE_PIN C5 } [ get_ports { Output_VGA_RED[2] } ]
+set_property -dict { IOSTANDARD LVCMOS33 PACKAGE_PIN A4 } [ get_ports { Output_VGA_RED[3] } ]
+set_property -dict { IOSTANDARD LVCMOS33 PACKAGE_PIN C6 } [ get_ports { Output_VGA_GREEN[0] } ]
+set_property -dict { IOSTANDARD LVCMOS33 PACKAGE_PIN A5 } [ get_ports { Output_VGA_GREEN[1] } ]
+set_property -dict { IOSTANDARD LVCMOS33 PACKAGE_PIN B6 } [ get_ports { Output_VGA_GREEN[2] } ]
+set_property -dict { IOSTANDARD LVCMOS33 PACKAGE_PIN A6 } [ get_ports { Output_VGA_GREEN[3] } ]
+set_property -dict { IOSTANDARD LVCMOS33 PACKAGE_PIN B7 } [ get_ports { Output_VGA_BLUE[0] } ]
+set_property -dict { IOSTANDARD LVCMOS33 PACKAGE_PIN C7 } [ get_ports { Output_VGA_BLUE[1] } ]
+set_property -dict { IOSTANDARD LVCMOS33 PACKAGE_PIN D7 } [ get_ports { Output_VGA_BLUE[2] } ]
+set_property -dict { IOSTANDARD LVCMOS33 PACKAGE_PIN D8 } [ get_ports { Output_VGA_BLUE[3] } ]
+set_property -dict { IOSTANDARD LVCMOS33 PACKAGE_PIN B11 } [ get_ports { Output_VGA_Hsync } ]
+set_property -dict { IOSTANDARD LVCMOS33 PACKAGE_PIN B12 } [ get_ports { Output_VGA_Vsync } ]
+
 # DebugLeds
 set_property -dict { IOSTANDARD LVCMOS33 PACKAGE_PIN H17 } [ get_ports { Output_DebugLed[0] } ]
 set_property -dict { IOSTANDARD LVCMOS33 PACKAGE_PIN K15 } [ get_ports { Output_DebugLed[1] } ]

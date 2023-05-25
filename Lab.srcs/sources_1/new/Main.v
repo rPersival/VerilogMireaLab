@@ -16,7 +16,12 @@ module Main(input clock, //clock
             output[7:0] segmentValues,
             output[7:0] outMask,
             output[15:0] Output_DebugLed,
-            output Output_UART_TX_DataBit
+            output Output_UART_TX_DataBit,
+            output wire [3:0] Output_VGA_RED,
+            output wire [3:0] Output_VGA_GREEN,
+            output wire [3:0] Output_VGA_BLUE,
+            output wire Output_VGA_Hsync,
+            output wire Output_VGA_Vsync
             );
 
 wire[63:0] innerBus;
@@ -138,5 +143,46 @@ uartRxTx  uart
     .Output_Wire_UART_ReaderPackageReady_State(Output_Wire_UART_ReaderPackageReady_State),
     .Output_Wire_UART_AscToHex_Hex_5bits(Output_Wire_UART_AscToHex_Hex_5bits)
 );
+
+`define WIDTH 800
+`define HEIGHT 600 
+
+////////////////////////////VGA///////////////////////////    
+    wire [$clog2(`WIDTH * `HEIGHT)-1:0] Wire_Color_Address;
+    wire Wire_VGA_Begin;
+    wire Wire_VGA_End;
+    
+    VGA module_VGA(
+        .Input_clk( clock ),
+        .Input_Color_Data( Wire_Color_Data ),
+        .Output_Color_Address( Wire_Color_Address ),
+        .Output_VGA_RED( Output_VGA_RED ),
+        .Output_VGA_GREEN( Output_VGA_GREEN ),
+        .Output_VGA_BLUE( Output_VGA_BLUE ),
+        .Output_Hsync( Output_VGA_Hsync ),
+        .Output_Vsync( Output_VGA_Vsync ),
+        .Output_VGA_Begin( Wire_VGA_Begin ),
+        .Output_VGA_End( Wire_VGA_End ));
+////////////////////////////VGA///////////////////////////
+////////////////////////VGA_Manager///////////////////////
+    wire [2:0] Wire_Color_Data;
+
+    VGA_Manager module_VGA_Manager(
+        .Input_clk( clock ),
+        .Input_Backpack_Answer( innerBus ),
+        .Input_Error( 1'd0 ),
+        .Input_Display( Wire_IsReadyOutout_Delayed == 1'd1 ),
+        .Input_VGA_Begin( Wire_VGA_Begin ),
+        .Input_VGA_End( Wire_VGA_End ),
+        .Input_Color_Address( Wire_Color_Address ),
+        .Output_Color_Data( Wire_Color_Data ));
+////////////////////////VGA_Manager///////////////////////
+
+wire Wire_IsReadyOutout_Delayed;
+
+Syncronizator module_Syncronizator(
+    .Input_clk( clock ),
+    .Input_AsyncSignal( isReadyOutput ),
+    .Output_StableSignal( Wire_IsReadyOutout_Delayed ));
 
 endmodule

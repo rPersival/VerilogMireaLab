@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.runs/synth_1/Main.tcl"
+  variable script "D:/Vivado_projects/Task_5_try/VerilogMireaLab/Lab.runs/synth_1/Main.tcl"
   variable category "vivado_synth"
 }
 
@@ -78,42 +78,53 @@ create_project -in_memory -part xc7a100tcsg324-1
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.cache/wt [current_project]
-set_property parent.project_path D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.xpr [current_project]
+set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
+set_property webtalk.parent_dir D:/Vivado_projects/Task_5_try/VerilogMireaLab/Lab.cache/wt [current_project]
+set_property parent.project_path D:/Vivado_projects/Task_5_try/VerilogMireaLab/Lab.xpr [current_project]
+set_property XPM_LIBRARIES XPM_MEMORY [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property ip_output_repo {d:/Vivado_projects/VerilogMireaLab 18.04.2023/Lab.cache/ip} [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_verilog -library xil_defaultlib {
-  D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/AnodesMaskRegister.v
-  D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/ClockDivider.v
-  D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/CountSort.v
-  D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/Counter.v
-  D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/Filter.v
-  D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/SegmentRegister.v
-  D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/ShiftRegister.v
-  D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/Synchronization.v
-  D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/keyboardSymbolDecoder.v
-  D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/packetDecoder.v
-  D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/packetHandler.v
-  D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/Main.v
-  D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/uartRxTx.v
-  D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/UART_Reader.v
-  D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/UART_Queue.v
-  D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/UART_Listener.v
-  D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/UART_Distributor.v
-  D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/Syncronizator.v
-  D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/Counter_A.v
-  D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/InputInterfaceController.v
-  D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/FilterDrebezga.v
-  D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/UART_ASCII_To_Hex.v
-  D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/UART_Transiver.v
-  D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/UART_BackpackData_Transmitter.v
-  D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/UART_Package_Transiver.v
-  D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/UART_Hex_To_ASCII.v
+read_mem {
+  D:/Vivado_projects/Task_5_try/VerilogMireaLab/Lab.srcs/sources_1/new/colors.mem
+  D:/Vivado_projects/Task_5_try/VerilogMireaLab/Lab.srcs/sources_1/new/alphabet.mem
 }
+read_verilog -library xil_defaultlib {
+  D:/Vivado_projects/Task_5_try/VerilogMireaLab/Lab.srcs/sources_1/new/AnodesMaskRegister.v
+  D:/Vivado_projects/Task_5_try/VerilogMireaLab/Lab.srcs/sources_1/new/ClockDivider.v
+  D:/Vivado_projects/Task_5_try/VerilogMireaLab/Lab.srcs/sources_1/new/CountSort.v
+  D:/Vivado_projects/Task_5_try/VerilogMireaLab/Lab.srcs/sources_1/new/Counter.v
+  D:/Vivado_projects/Task_5_try/VerilogMireaLab/Lab.srcs/sources_1/new/Filter.v
+  D:/Vivado_projects/Task_5_try/VerilogMireaLab/Lab.srcs/sources_1/new/SegmentRegister.v
+  D:/Vivado_projects/Task_5_try/VerilogMireaLab/Lab.srcs/sources_1/new/ShiftRegister.v
+  D:/Vivado_projects/Task_5_try/VerilogMireaLab/Lab.srcs/sources_1/new/Synchronization.v
+  D:/Vivado_projects/Task_5_try/VerilogMireaLab/Lab.srcs/sources_1/new/keyboardSymbolDecoder.v
+  D:/Vivado_projects/Task_5_try/VerilogMireaLab/Lab.srcs/sources_1/new/packetDecoder.v
+  D:/Vivado_projects/Task_5_try/VerilogMireaLab/Lab.srcs/sources_1/new/packetHandler.v
+  D:/Vivado_projects/Task_5_try/VerilogMireaLab/Lab.srcs/sources_1/new/Main.v
+  D:/Vivado_projects/Task_5_try/VerilogMireaLab/Lab.srcs/sources_1/new/uartRxTx.v
+  D:/Vivado_projects/Task_5_try/VerilogMireaLab/Lab.srcs/sources_1/new/UART_Reader.v
+  D:/Vivado_projects/Task_5_try/VerilogMireaLab/Lab.srcs/sources_1/new/UART_Queue.v
+  D:/Vivado_projects/Task_5_try/VerilogMireaLab/Lab.srcs/sources_1/new/UART_Listener.v
+  D:/Vivado_projects/Task_5_try/VerilogMireaLab/Lab.srcs/sources_1/new/UART_Distributor.v
+  D:/Vivado_projects/Task_5_try/VerilogMireaLab/Lab.srcs/sources_1/new/Syncronizator.v
+  D:/Vivado_projects/Task_5_try/VerilogMireaLab/Lab.srcs/sources_1/new/Counter_A.v
+  D:/Vivado_projects/Task_5_try/VerilogMireaLab/Lab.srcs/sources_1/new/InputInterfaceController.v
+  D:/Vivado_projects/Task_5_try/VerilogMireaLab/Lab.srcs/sources_1/new/FilterDrebezga.v
+  D:/Vivado_projects/Task_5_try/VerilogMireaLab/Lab.srcs/sources_1/new/UART_ASCII_To_Hex.v
+  D:/Vivado_projects/Task_5_try/VerilogMireaLab/Lab.srcs/sources_1/new/UART_Transiver.v
+  D:/Vivado_projects/Task_5_try/VerilogMireaLab/Lab.srcs/sources_1/new/UART_BackpackData_Transmitter.v
+  D:/Vivado_projects/Task_5_try/VerilogMireaLab/Lab.srcs/sources_1/new/UART_Package_Transiver.v
+  D:/Vivado_projects/Task_5_try/VerilogMireaLab/Lab.srcs/sources_1/new/UART_Hex_To_ASCII.v
+  D:/Vivado_projects/Task_5_try/VerilogMireaLab/Lab.srcs/sources_1/new/VGA_Manager.v
+  D:/Vivado_projects/Task_5_try/VerilogMireaLab/Lab.srcs/sources_1/new/VGA.v
+}
+read_ip -quiet D:/Vivado_projects/Task_5_try/VerilogMireaLab/Lab.srcs/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0.xci
+set_property used_in_implementation false [get_files -all d:/Vivado_projects/Task_5_try/VerilogMireaLab/Lab.gen/sources_1/ip/blk_mem_gen_0/blk_mem_gen_0_ooc.xdc]
+
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -123,8 +134,8 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/constrs_1/new/constraints.xdc
-set_property used_in_implementation false [get_files D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/constrs_1/new/constraints.xdc]
+read_xdc D:/Vivado_projects/Task_5_try/VerilogMireaLab/Lab.srcs/constrs_1/new/constraints.xdc
+set_property used_in_implementation false [get_files D:/Vivado_projects/Task_5_try/VerilogMireaLab/Lab.srcs/constrs_1/new/constraints.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 
