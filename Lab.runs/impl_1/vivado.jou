@@ -2,12 +2,12 @@
 # Vivado v2022.1 (64-bit)
 # SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
 # IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
-# Start of session at: Tue Apr 11 18:10:46 2023
-# Process ID: 9904
-# Current directory: D:/Alex/VerilogLab/VerilogMireaLab/Task_9.runs/impl_1
+# Start of session at: Sat Apr 22 17:36:16 2023
+# Process ID: 8000
+# Current directory: D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.runs/impl_1
 # Command line: vivado.exe -log Main.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source Main.tcl -notrace
-# Log file: D:/Alex/VerilogLab/VerilogMireaLab/Task_9.runs/impl_1/Main.vdi
-# Journal file: D:/Alex/VerilogLab/VerilogMireaLab/Task_9.runs/impl_1\vivado.jou
-# Running On: Nussandr, OS: Windows, CPU Frequency: 3302 MHz, CPU Physical cores: 4, Host memory: 16952 MB
+# Log file: D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.runs/impl_1/Main.vdi
+# Journal file: D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.runs/impl_1\vivado.jou
+# Running On: LAPTOP-N1U65B11, OS: Windows, CPU Frequency: 2419 MHz, CPU Physical cores: 4, Host memory: 8379 MB
 #-----------------------------------------------------------
 source Main.tcl -notrace

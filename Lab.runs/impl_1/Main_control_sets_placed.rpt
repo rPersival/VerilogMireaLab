@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-| Date         : Tue Apr 11 18:11:20 2023
-| Host         : Nussandr running 64-bit major release  (build 9200)
+| Date         : Sat Apr 22 17:36:43 2023
+| Host         : LAPTOP-N1U65B11 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file Main_control_sets_placed.rpt
 | Design       : Main
 | Device       : xc7a100t
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |    45 |
-|    Minimum number of control sets                        |    45 |
+| Total control sets                                       |    50 |
+|    Minimum number of control sets                        |    50 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |   179 |
+| Unused register locations in slices containing registers |   189 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,11 +39,11 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |    45 |
+| Total control sets |    50 |
 | >= 0 to < 4        |     1 |
-| >= 4 to < 6        |    40 |
-| >= 6 to < 8        |     0 |
-| >= 8 to < 10       |     0 |
+| >= 4 to < 6        |    43 |
+| >= 6 to < 8        |     1 |
+| >= 8 to < 10       |     1 |
 | >= 10 to < 12      |     0 |
 | >= 12 to < 14      |     0 |
 | >= 14 to < 16      |     0 |
@@ -58,66 +58,71 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              61 |           25 |
+| No           | No                    | No                     |              70 |           25 |
 | No           | No                    | Yes                    |               0 |            0 |
 | No           | Yes                   | No                     |              20 |            5 |
-| Yes          | No                    | No                     |              64 |           28 |
+| Yes          | No                    | No                     |              85 |           39 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |             204 |           91 |
+| Yes          | Yes                   | No                     |             204 |           99 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+-------------------------------+-------------------------------------------+-------------------------------------+------------------+----------------+--------------+
-|          Clock Signal         |               Enable Signal               |           Set/Reset Signal          | Slice Load Count | Bel Load Count | Bels / Slice |
-+-------------------------------+-------------------------------------------+-------------------------------------+------------------+----------------+--------------+
-|  divider/counter/out_reg[0]_0 |                                           |                                     |                1 |              1 |         1.00 |
-|  clock_IBUF_BUFG              |                                           | filter3/synchronizationSignal/SR[0] |                1 |              4 |         4.00 |
-|  clock_IBUF_BUFG              | countSort/thirdCounter/state_reg[0][6]    | filter3/isResetted0                 |                1 |              4 |         4.00 |
-|  clock_IBUF_BUFG              |                                           | filter1/synchronizationSignal/SR[0] |                1 |              4 |         4.00 |
-|  clock_IBUF_BUFG              |                                           | filter2/synchronizationSignal/SR[0] |                1 |              4 |         4.00 |
-|  clock_IBUF_BUFG              | countSort/secondCounter/E[10]             | filter3/isResetted0                 |                2 |              4 |         2.00 |
-|  clock_IBUF_BUFG              |                                           | filter4/synchronizationSignal/SR[0] |                1 |              4 |         4.00 |
-|  clock_IBUF_BUFG              |                                           | filter5/synchronizationSignal/SR[0] |                1 |              4 |         4.00 |
-|  clock_IBUF_BUFG              | countSort/secondCounter/out[3]_i_1__1_n_0 | filter3/isResetted0                 |                2 |              4 |         2.00 |
-|  clock_IBUF_BUFG              | countSort/secondCounter/E[2]              | filter3/isResetted0                 |                2 |              4 |         2.00 |
-|  clock_IBUF_BUFG              | countSort/thirdCounter/state_reg[0][14]   | filter3/isResetted0                 |                1 |              4 |         4.00 |
-|  clock_IBUF_BUFG              | countSort/secondCounter/E[1]              | filter3/isResetted0                 |                2 |              4 |         2.00 |
-|  clock_IBUF_BUFG              | countSort/secondCounter/E[3]              | filter3/isResetted0                 |                2 |              4 |         2.00 |
-|  clock_IBUF_BUFG              | countSort/secondCounter/E[5]              | filter3/isResetted0                 |                3 |              4 |         1.33 |
-|  clock_IBUF_BUFG              | countSort/secondCounter/E[8]              | filter3/isResetted0                 |                3 |              4 |         1.33 |
-|  clock_IBUF_BUFG              | countSort/secondCounter/E[9]              | filter3/isResetted0                 |                2 |              4 |         2.00 |
-|  clock_IBUF_BUFG              | countSort/secondCounter/E[6]              | filter3/isResetted0                 |                2 |              4 |         2.00 |
-|  clock_IBUF_BUFG              | countSort/secondCounter/E[12]             | filter3/isResetted0                 |                2 |              4 |         2.00 |
-|  clock_IBUF_BUFG              | countSort/secondCounter/E[13]             | filter3/isResetted0                 |                2 |              4 |         2.00 |
-|  clock_IBUF_BUFG              | countSort/secondCounter/E[7]              | filter3/isResetted0                 |                3 |              4 |         1.33 |
-|  clock_IBUF_BUFG              | countSort/secondCounter/E[4]              | filter3/isResetted0                 |                1 |              4 |         4.00 |
-|  clock_IBUF_BUFG              | countSort/secondCounter/E[0]              | filter3/isResetted0                 |                2 |              4 |         2.00 |
-|  clock_IBUF_BUFG              | countSort/secondCounter/E[11]             | filter3/isResetted0                 |                2 |              4 |         2.00 |
-|  clock_IBUF_BUFG              | countSort/thirdCounter/out[3]_i_1_n_0     | filter3/isResetted0                 |                1 |              4 |         4.00 |
-|  clock_IBUF_BUFG              | countSort/firstCounter/sel                | filter3/isResetted0                 |                1 |              4 |         4.00 |
-|  clock_IBUF_BUFG              | countSort/firstCounter/E[0]               | filter3/isResetted0                 |                3 |              4 |         1.33 |
-|  clock_IBUF_BUFG              | countSort/thirdCounter/E[0]               | filter3/isResetted0                 |                3 |              4 |         1.33 |
-|  clock_IBUF_BUFG              | countSort/thirdCounter/state_reg[0][0]    | filter3/isResetted0                 |                3 |              4 |         1.33 |
-|  clock_IBUF_BUFG              | countSort/thirdCounter/state_reg[0][3]    | filter3/isResetted0                 |                3 |              4 |         1.33 |
-|  clock_IBUF_BUFG              | countSort/thirdCounter/state_reg[0][11]   | filter3/isResetted0                 |                2 |              4 |         2.00 |
-|  clock_IBUF_BUFG              | countSort/thirdCounter/state_reg[0][15]   | filter3/isResetted0                 |                1 |              4 |         4.00 |
-|  clock_IBUF_BUFG              | countSort/thirdCounter/state_reg[0][2]    | filter3/isResetted0                 |                2 |              4 |         2.00 |
-|  clock_IBUF_BUFG              | countSort/thirdCounter/state_reg[0][7]    | filter3/isResetted0                 |                1 |              4 |         4.00 |
-|  clock_IBUF_BUFG              | countSort/thirdCounter/state_reg[0][10]   | filter3/isResetted0                 |                1 |              4 |         4.00 |
-|  clock_IBUF_BUFG              | countSort/thirdCounter/state_reg[0][9]    | filter3/isResetted0                 |                2 |              4 |         2.00 |
-|  clock_IBUF_BUFG              | countSort/thirdCounter/state_reg[0][1]    | filter3/isResetted0                 |                1 |              4 |         4.00 |
-|  clock_IBUF_BUFG              | countSort/thirdCounter/state_reg[0][12]   | filter3/isResetted0                 |                1 |              4 |         4.00 |
-|  clock_IBUF_BUFG              | countSort/thirdCounter/state_reg[0][5]    | filter3/isResetted0                 |                1 |              4 |         4.00 |
-|  clock_IBUF_BUFG              | countSort/thirdCounter/state_reg[0][4]    | filter3/isResetted0                 |                4 |              4 |         1.00 |
-|  clock_IBUF_BUFG              | countSort/thirdCounter/state_reg[0][13]   | filter3/isResetted0                 |                2 |              4 |         2.00 |
-|  clock_IBUF_BUFG              | countSort/thirdCounter/state_reg[0][8]    | filter3/isResetted0                 |                2 |              4 |         2.00 |
-|  divider/outClock             |                                           |                                     |                5 |             18 |         3.60 |
-|  clock_IBUF_BUFG              |                                           |                                     |               19 |             42 |         2.21 |
-|  clock_IBUF_BUFG              | countSort/currentValue[63]_i_2_n_0        | filter3/isResetted0                 |               23 |             64 |         2.78 |
-|  clock_IBUF_BUFG              | shiftRegister/value[63]_i_1_n_0           |                                     |               28 |             64 |         2.29 |
-+-------------------------------+-------------------------------------------+-------------------------------------+------------------+----------------+--------------+
++------------------------------------------------------+---------------------------------------------------+-------------------------------------+------------------+----------------+--------------+
+|                     Clock Signal                     |                   Enable Signal                   |           Set/Reset Signal          | Slice Load Count | Bel Load Count | Bels / Slice |
++------------------------------------------------------+---------------------------------------------------+-------------------------------------+------------------+----------------+--------------+
+|  divider/counter/out_reg[0]_0                        |                                                   |                                     |                1 |              1 |         1.00 |
+|  clock_IBUF_BUFG                                     |                                                   | filter1/synchronizationSignal/SR[0] |                1 |              4 |         4.00 |
+|  clock_IBUF_BUFG                                     | countSort/thirdCounter/state_reg[0]_4[11]         | filter3/isResetted0                 |                2 |              4 |         2.00 |
+|  clock_IBUF_BUFG                                     | countSort/thirdCounter/state_reg[0]_4[15]         | filter3/isResetted0                 |                2 |              4 |         2.00 |
+|  clock_IBUF_BUFG                                     | countSort/thirdCounter/state_reg[0]_4[14]         | filter3/isResetted0                 |                1 |              4 |         4.00 |
+|  clock_IBUF_BUFG                                     | shiftRegister/pos[3]_i_1_n_0                      |                                     |                2 |              4 |         2.00 |
+|  clock_IBUF_BUFG                                     | countSort/firstCounter/E[1]                       | filter3/isResetted0                 |                4 |              4 |         1.00 |
+|  clock_IBUF_BUFG                                     |                                                   | filter2/synchronizationSignal/SR[0] |                1 |              4 |         4.00 |
+|  clock_IBUF_BUFG                                     |                                                   | filter3/synchronizationSignal/SR[0] |                1 |              4 |         4.00 |
+|  clock_IBUF_BUFG                                     |                                                   | filter4/synchronizationSignal/SR[0] |                1 |              4 |         4.00 |
+|  clock_IBUF_BUFG                                     |                                                   | filter5/synchronizationSignal/SR[0] |                1 |              4 |         4.00 |
+|  clock_IBUF_BUFG                                     | countSort/firstCounter/sel                        | filter3/isResetted0                 |                1 |              4 |         4.00 |
+|  clock_IBUF_BUFG                                     | symbolDecoder/handler/E[0]                        |                                     |                3 |              4 |         1.33 |
+|  clock_IBUF_BUFG                                     | countSort/firstCounter/E[0]                       | filter3/isResetted0                 |                2 |              4 |         2.00 |
+|  clock_IBUF_BUFG                                     | countSort/thirdCounter/out[3]_i_1_n_0             | filter3/isResetted0                 |                2 |              4 |         2.00 |
+|  clock_IBUF_BUFG                                     | countSort/secondCounter/out[3]_i_1__1_n_0         | filter3/isResetted0                 |                1 |              4 |         4.00 |
+|  clock_IBUF_BUFG                                     | countSort/secondCounter/E[3]                      | filter3/isResetted0                 |                3 |              4 |         1.33 |
+|  clock_IBUF_BUFG                                     | countSort/secondCounter/E[10]                     | filter3/isResetted0                 |                2 |              4 |         2.00 |
+|  clock_IBUF_BUFG                                     | countSort/secondCounter/E[1]                      | filter3/isResetted0                 |                3 |              4 |         1.33 |
+|  clock_IBUF_BUFG                                     | countSort/secondCounter/E[9]                      | filter3/isResetted0                 |                3 |              4 |         1.33 |
+|  clock_IBUF_BUFG                                     | countSort/secondCounter/E[0]                      | filter3/isResetted0                 |                3 |              4 |         1.33 |
+|  clock_IBUF_BUFG                                     | countSort/secondCounter/E[4]                      | filter3/isResetted0                 |                3 |              4 |         1.33 |
+|  clock_IBUF_BUFG                                     | countSort/secondCounter/E[7]                      | filter3/isResetted0                 |                4 |              4 |         1.00 |
+|  clock_IBUF_BUFG                                     | countSort/secondCounter/E[2]                      | filter3/isResetted0                 |                2 |              4 |         2.00 |
+|  clock_IBUF_BUFG                                     | countSort/secondCounter/E[6]                      | filter3/isResetted0                 |                3 |              4 |         1.33 |
+|  clock_IBUF_BUFG                                     | countSort/secondCounter/E[8]                      | filter3/isResetted0                 |                3 |              4 |         1.33 |
+|  clock_IBUF_BUFG                                     | countSort/secondCounter/E[5]                      | filter3/isResetted0                 |                3 |              4 |         1.33 |
+|  clock_IBUF_BUFG                                     | countSort/thirdCounter/E[0]                       | filter3/isResetted0                 |                4 |              4 |         1.00 |
+|  clock_IBUF_BUFG                                     | countSort/thirdCounter/E[2]                       | filter3/isResetted0                 |                3 |              4 |         1.33 |
+|  clock_IBUF_BUFG                                     | countSort/thirdCounter/E[1]                       | filter3/isResetted0                 |                3 |              4 |         1.33 |
+|  clock_IBUF_BUFG                                     | countSort/thirdCounter/state_reg[0]_4[0]          | filter3/isResetted0                 |                1 |              4 |         4.00 |
+|  clock_IBUF_BUFG                                     | countSort/thirdCounter/state_reg[0]_4[2]          | filter3/isResetted0                 |                2 |              4 |         2.00 |
+|  clock_IBUF_BUFG                                     | countSort/thirdCounter/state_reg[0]_4[3]          | filter3/isResetted0                 |                1 |              4 |         4.00 |
+|  clock_IBUF_BUFG                                     | countSort/thirdCounter/state_reg[0]_4[4]          | filter3/isResetted0                 |                3 |              4 |         1.33 |
+|  clock_IBUF_BUFG                                     | countSort/thirdCounter/state_reg[0]_4[1]          | filter3/isResetted0                 |                1 |              4 |         4.00 |
+|  clock_IBUF_BUFG                                     | countSort/thirdCounter/state_reg[0]_4[5]          | filter3/isResetted0                 |                1 |              4 |         4.00 |
+|  clock_IBUF_BUFG                                     | countSort/thirdCounter/state_reg[0]_4[6]          | filter3/isResetted0                 |                1 |              4 |         4.00 |
+|  clock_IBUF_BUFG                                     | countSort/thirdCounter/state_reg[0]_4[13]         | filter3/isResetted0                 |                2 |              4 |         2.00 |
+|  clock_IBUF_BUFG                                     | countSort/thirdCounter/state_reg[0]_4[12]         | filter3/isResetted0                 |                1 |              4 |         4.00 |
+|  clock_IBUF_BUFG                                     | countSort/thirdCounter/state_reg[0]_4[9]          | filter3/isResetted0                 |                3 |              4 |         1.33 |
+|  clock_IBUF_BUFG                                     | countSort/thirdCounter/state_reg[0]_4[7]          | filter3/isResetted0                 |                2 |              4 |         2.00 |
+|  clock_IBUF_BUFG                                     | countSort/thirdCounter/state_reg[0]_4[10]         | filter3/isResetted0                 |                2 |              4 |         2.00 |
+|  clock_IBUF_BUFG                                     | countSort/thirdCounter/state_reg[0]_4[8]          | filter3/isResetted0                 |                2 |              4 |         2.00 |
+| ~symbolDecoder/handler/keyboardClockSyncronized_1[1] | symbolDecoder/handler/FSM_onehot_state[4]_i_1_n_0 |                                     |                2 |              5 |         2.50 |
+| ~symbolDecoder/handler/keyboardClockSyncronized_1[1] |                                                   |                                     |                3 |              6 |         2.00 |
+| ~symbolDecoder/handler/keyboardClockSyncronized_1[1] | symbolDecoder/handler/keyboardDataBuffer_0        |                                     |                3 |              8 |         2.67 |
+|  divider/outClock                                    |                                                   |                                     |                4 |             18 |         4.50 |
+|  clock_IBUF_BUFG                                     |                                                   |                                     |               17 |             45 |         2.65 |
+|  clock_IBUF_BUFG                                     | filter1/E[0]                                      |                                     |               29 |             64 |         2.21 |
+|  clock_IBUF_BUFG                                     | countSort/currentValue[63]_i_2_n_0                | filter3/isResetted0                 |               20 |             64 |         3.20 |
++------------------------------------------------------+---------------------------------------------------+-------------------------------------+------------------+----------------+--------------+
 
 
