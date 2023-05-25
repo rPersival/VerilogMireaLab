@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-| Date         : Sat Apr 22 17:37:15 2023
+| Date         : Tue May 23 20:27:04 2023
 | Host         : LAPTOP-N1U65B11 running 64-bit major release  (build 9200)
 | Command      : report_drc -file Main_drc_routed.rpt -pb Main_drc_routed.pb -rpx Main_drc_routed.rpx
 | Design       : Main
@@ -24,12 +24,12 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 3
+             Violations found: 11
 +-------------+----------+-------------------------------------------------------------+------------+
 | Rule        | Severity | Description                                                 | Violations |
 +-------------+----------+-------------------------------------------------------------+------------+
 | CFGBVS-1    | Warning  | Missing CFGBVS and CONFIG_VOLTAGE Design Properties         | 1          |
-| PDRC-153    | Warning  | Gated clock check                                           | 1          |
+| PDRC-153    | Warning  | Gated clock check                                           | 9          |
 | PLHOLDVIO-2 | Warning  | Non-Optimal connections which could lead to hold violations | 1          |
 +-------------+----------+-------------------------------------------------------------+------------+
 
@@ -51,6 +51,46 @@ Related violations: <none>
 PDRC-153#1 Warning
 Gated clock check  
 Net divider/counter/out_reg[0]_0 is a gated clock net sourced by a combinational pin divider/counter/outClock_i_2/O, cell divider/counter/outClock_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#2 Warning
+Gated clock check  
+Net symbolDecoder/handler/keyboardDataBuffer_reg[7]_0[0] is a gated clock net sourced by a combinational pin symbolDecoder/handler/flags_reg[1]_i_2/O, cell symbolDecoder/handler/flags_reg[1]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#3 Warning
+Gated clock check  
+Net symbolDecoder/handler/keyboardDataBuffer_reg[7]_1 is a gated clock net sourced by a combinational pin symbolDecoder/handler/rButtonFlagD_reg_i_2/O, cell symbolDecoder/handler/rButtonFlagD_reg_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#4 Warning
+Gated clock check  
+Net uart/module_UART_Transiver/module_UART_Queue/Output_Queue_Ready_reg_10 is a gated clock net sourced by a combinational pin uart/module_UART_Transiver/module_UART_Queue/Temp_Package_Data_reg[5]_LDC_i_1/O, cell uart/module_UART_Transiver/module_UART_Queue/Temp_Package_Data_reg[5]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#5 Warning
+Gated clock check  
+Net uart/module_UART_Transiver/module_UART_Queue/Output_Queue_Ready_reg_12 is a gated clock net sourced by a combinational pin uart/module_UART_Transiver/module_UART_Queue/Temp_Package_Data_reg[6]_LDC_i_1/O, cell uart/module_UART_Transiver/module_UART_Queue/Temp_Package_Data_reg[6]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#6 Warning
+Gated clock check  
+Net uart/module_UART_Transiver/module_UART_Queue/Output_Queue_Ready_reg_2 is a gated clock net sourced by a combinational pin uart/module_UART_Transiver/module_UART_Queue/Temp_Package_Data_reg[0]_LDC_i_1/O, cell uart/module_UART_Transiver/module_UART_Queue/Temp_Package_Data_reg[0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#7 Warning
+Gated clock check  
+Net uart/module_UART_Transiver/module_UART_Queue/Output_Queue_Ready_reg_4 is a gated clock net sourced by a combinational pin uart/module_UART_Transiver/module_UART_Queue/Temp_Package_Data_reg[1]_LDC_i_1/O, cell uart/module_UART_Transiver/module_UART_Queue/Temp_Package_Data_reg[1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#8 Warning
+Gated clock check  
+Net uart/module_UART_Transiver/module_UART_Queue/Output_Queue_Ready_reg_6 is a gated clock net sourced by a combinational pin uart/module_UART_Transiver/module_UART_Queue/Temp_Package_Data_reg[2]_LDC_i_1/O, cell uart/module_UART_Transiver/module_UART_Queue/Temp_Package_Data_reg[2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#9 Warning
+Gated clock check  
+Net uart/module_UART_Transiver/module_UART_Queue/Output_Queue_Ready_reg_8 is a gated clock net sourced by a combinational pin uart/module_UART_Transiver/module_UART_Queue/Temp_Package_Data_reg[3]_LDC_i_1/O, cell uart/module_UART_Transiver/module_UART_Queue/Temp_Package_Data_reg[3]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PLHOLDVIO-2#1 Warning

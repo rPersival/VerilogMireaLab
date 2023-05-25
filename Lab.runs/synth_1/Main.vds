@@ -2,17 +2,17 @@
 # Vivado v2022.1 (64-bit)
 # SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
 # IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
-# Start of session at: Sat Apr 22 17:35:26 2023
-# Process ID: 5464
-# Current directory: D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.runs/synth_1
+# Start of session at: Tue May 23 20:25:16 2023
+# Process ID: 13620
+# Current directory: D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.runs/synth_1
 # Command line: vivado.exe -log Main.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Main.tcl
-# Log file: D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.runs/synth_1/Main.vds
-# Journal file: D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.runs/synth_1\vivado.jou
+# Log file: D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.runs/synth_1/Main.vds
+# Journal file: D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.runs/synth_1\vivado.jou
 # Running On: LAPTOP-N1U65B11, OS: Windows, CPU Frequency: 2419 MHz, CPU Physical cores: 4, Host memory: 8379 MB
 #-----------------------------------------------------------
 source Main.tcl -notrace
-Command: read_checkpoint -incremental D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.srcs/utils_1/imports/synth_1/Main.dcp
-INFO: [Vivado 12-5825] Read reference checkpoint from D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.srcs/utils_1/imports/synth_1/Main.dcp for incremental synthesis
+Command: read_checkpoint -incremental D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/utils_1/imports/synth_1/Main.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/utils_1/imports/synth_1/Main.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
 Command: synth_design -top Main -part xc7a100tcsg324-1
 Starting synth_design
@@ -23,105 +23,172 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 17168
+INFO: [Synth 8-7075] Helper process launched with PID 664
+WARNING: [Synth 8-8895] 'Wire_ButtonInsert_clk' is already implicitly declared on line 64 [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/Main.v:95]
+WARNING: [Synth 8-8895] 'Wire_ButtonClear_clk' is already implicitly declared on line 88 [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/Main.v:96]
+WARNING: [Synth 8-8895] 'Wire_ButtonLeft_clk' is already implicitly declared on line 65 [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/Main.v:97]
+WARNING: [Synth 8-8895] 'Wire_ButtonRight_clk' is already implicitly declared on line 66 [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/Main.v:98]
+WARNING: [Synth 8-8895] 'Wire_ButtonDown_clk' is already implicitly declared on line 60 [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/Main.v:99]
+WARNING: [Synth 8-8895] 'Output_Wire_UART_ReaderASCIIPackage_8bits' is already implicitly declared on line 115 [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/Main.v:124]
+WARNING: [Synth 8-8895] 'Output_Wire_UART_ReaderPackageReady_State' is already implicitly declared on line 114 [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/Main.v:125]
+WARNING: [Synth 8-8895] 'Output_Wire_UART_AscToHex_Hex_5bits' is already implicitly declared on line 58 [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/Main.v:126]
+WARNING: [Synth 8-6901] identifier 'Output_Wire_UART_ReaderASCIIPackage_8bits' is used before its declaration [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/Main.v:102]
+WARNING: [Synth 8-8895] 'Wire_UART_ReaderASCIIPackage_8bits' is already implicitly declared on line 30 [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/uartRxTx.v:35]
+WARNING: [Synth 8-8895] 'Wire_UART_ReaderPackageReady_State' is already implicitly declared on line 29 [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/uartRxTx.v:36]
+WARNING: [Synth 8-8895] 'Wire_BacDatTrans_HexPart_5bits' is already implicitly declared on line 55 [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/uartRxTx.v:61]
+WARNING: [Synth 8-8895] 'Wire_UART_Transiver_QueueFull' is already implicitly declared on line 65 [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/uartRxTx.v:73]
+WARNING: [Synth 8-6901] identifier 'Wire_UART_ReaderASCIIPackage_8bits' is used before its declaration [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/uartRxTx.v:19]
+WARNING: [Synth 8-6901] identifier 'Wire_UART_ReaderPackageReady_State' is used before its declaration [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/uartRxTx.v:20]
+WARNING: [Synth 8-6901] identifier 'Wire_UART_AscToHex_Hex_5bits' is used before its declaration [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/uartRxTx.v:21]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 1294.117 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1355.445 ; gain = 0.000
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'Main' [D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.srcs/sources_1/new/Main.v:3]
-INFO: [Synth 8-6157] synthesizing module 'ShiftRegister' [D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.srcs/sources_1/new/ShiftRegister.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'ShiftRegister' (0#1) [D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.srcs/sources_1/new/ShiftRegister.v:3]
-INFO: [Synth 8-6157] synthesizing module 'ClockDivider' [D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.srcs/sources_1/new/ClockDivider.v:3]
+INFO: [Synth 8-6157] synthesizing module 'Main' [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/Main.v:3]
+INFO: [Synth 8-6157] synthesizing module 'ShiftRegister' [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/ShiftRegister.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'ShiftRegister' (0#1) [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/ShiftRegister.v:3]
+WARNING: [Synth 8-689] width (5) of port connection 'inp' does not match port width (4) of module 'ShiftRegister' [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/Main.v:58]
+INFO: [Synth 8-6157] synthesizing module 'ClockDivider' [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/ClockDivider.v:3]
 	Parameter rate bound to: 10240 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'Counter' [D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.srcs/sources_1/new/Counter.v:3]
+INFO: [Synth 8-6157] synthesizing module 'Counter' [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/Counter.v:3]
 	Parameter step bound to: 1 - type: integer 
 	Parameter mod bound to: 10240 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'Counter' (0#1) [D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.srcs/sources_1/new/Counter.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'ClockDivider' (0#1) [D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.srcs/sources_1/new/ClockDivider.v:3]
-INFO: [Synth 8-6157] synthesizing module 'Filter' [D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.srcs/sources_1/new/Filter.v:3]
-INFO: [Synth 8-6157] synthesizing module 'Synchronization' [D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.srcs/sources_1/new/Synchronization.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'Synchronization' (0#1) [D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.srcs/sources_1/new/Synchronization.v:3]
-INFO: [Synth 8-6157] synthesizing module 'Counter__parameterized0' [D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.srcs/sources_1/new/Counter.v:3]
-	Parameter step bound to: 1 - type: integer 
-	Parameter mod bound to: 16 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'Counter__parameterized0' (0#1) [D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.srcs/sources_1/new/Counter.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'Filter' (0#1) [D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.srcs/sources_1/new/Filter.v:3]
-INFO: [Synth 8-6157] synthesizing module 'Counter__parameterized1' [D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.srcs/sources_1/new/Counter.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'Counter' (0#1) [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/Counter.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'ClockDivider' (0#1) [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/ClockDivider.v:3]
+INFO: [Synth 8-6157] synthesizing module 'Counter__parameterized0' [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/Counter.v:3]
 	Parameter step bound to: 1 - type: integer 
 	Parameter mod bound to: 8 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'Counter__parameterized1' (0#1) [D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.srcs/sources_1/new/Counter.v:3]
-INFO: [Synth 8-6157] synthesizing module 'SegmentRegister' [D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.srcs/sources_1/new/SegmentRegister.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'SegmentRegister' (0#1) [D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.srcs/sources_1/new/SegmentRegister.v:3]
-INFO: [Synth 8-6157] synthesizing module 'AnodesMaskRegister' [D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.srcs/sources_1/new/AnodesMaskRegister.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'AnodesMaskRegister' (0#1) [D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.srcs/sources_1/new/AnodesMaskRegister.v:3]
-INFO: [Synth 8-6157] synthesizing module 'CountSort' [D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.srcs/sources_1/new/CountSort.v:3]
-INFO: [Synth 8-6157] synthesizing module 'Counter__parameterized2' [D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.srcs/sources_1/new/Counter.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'Counter__parameterized0' (0#1) [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/Counter.v:3]
+INFO: [Synth 8-6157] synthesizing module 'SegmentRegister' [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/SegmentRegister.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'SegmentRegister' (0#1) [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/SegmentRegister.v:3]
+INFO: [Synth 8-6157] synthesizing module 'AnodesMaskRegister' [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/AnodesMaskRegister.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'AnodesMaskRegister' (0#1) [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/AnodesMaskRegister.v:3]
+INFO: [Synth 8-6157] synthesizing module 'CountSort' [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/CountSort.v:3]
+INFO: [Synth 8-6157] synthesizing module 'Counter__parameterized1' [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/Counter.v:3]
+	Parameter step bound to: 1 - type: integer 
+	Parameter mod bound to: 16 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Counter__parameterized1' (0#1) [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/Counter.v:3]
+INFO: [Synth 8-6157] synthesizing module 'Counter__parameterized2' [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/Counter.v:3]
 	Parameter step bound to: 1 - type: integer 
 	Parameter mod bound to: 16 - type: integer 
 	Parameter startValue bound to: 1 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'Counter__parameterized2' (0#1) [D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.srcs/sources_1/new/Counter.v:3]
-INFO: [Synth 8-6157] synthesizing module 'Counter__parameterized3' [D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.srcs/sources_1/new/Counter.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'Counter__parameterized2' (0#1) [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/Counter.v:3]
+INFO: [Synth 8-6157] synthesizing module 'Counter__parameterized3' [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/Counter.v:3]
 	Parameter step bound to: -1 - type: integer 
 	Parameter mod bound to: 16 - type: integer 
 	Parameter startValue bound to: 15 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'Counter__parameterized3' (0#1) [D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.srcs/sources_1/new/Counter.v:3]
-INFO: [Synth 8-155] case statement is not full and has no default [D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.srcs/sources_1/new/CountSort.v:34]
-INFO: [Synth 8-6155] done synthesizing module 'CountSort' (0#1) [D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.srcs/sources_1/new/CountSort.v:3]
-INFO: [Synth 8-6157] synthesizing module 'keyboardSymbolDecoder' [D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.srcs/sources_1/new/keyboardSymbolDecoder.v:3]
-INFO: [Synth 8-6157] synthesizing module 'packetHandler' [D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.srcs/sources_1/new/packetHandler.v:3]
-INFO: [Synth 8-155] case statement is not full and has no default [D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.srcs/sources_1/new/packetHandler.v:52]
-INFO: [Synth 8-6155] done synthesizing module 'packetHandler' (0#1) [D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.srcs/sources_1/new/packetHandler.v:3]
-INFO: [Synth 8-6157] synthesizing module 'packetDecoder' [D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.srcs/sources_1/new/packetDecoder.v:3]
-WARNING: [Synth 8-567] referenced signal 'numberScancodes' should be on the sensitivity list [D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.srcs/sources_1/new/packetDecoder.v:37]
-WARNING: [Synth 8-567] referenced signal 'numberScancodes' should be on the sensitivity list [D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.srcs/sources_1/new/packetDecoder.v:66]
-INFO: [Synth 8-6155] done synthesizing module 'packetDecoder' (0#1) [D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.srcs/sources_1/new/packetDecoder.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'keyboardSymbolDecoder' (0#1) [D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.srcs/sources_1/new/keyboardSymbolDecoder.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'Main' (0#1) [D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.srcs/sources_1/new/Main.v:3]
-WARNING: [Synth 8-6014] Unused sequential element flagsDelayedKey_reg was removed.  [D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.srcs/sources_1/new/ShiftRegister.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'Counter__parameterized3' (0#1) [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/Counter.v:3]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/CountSort.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'CountSort' (0#1) [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/CountSort.v:3]
+INFO: [Synth 8-6157] synthesizing module 'keyboardSymbolDecoder' [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/keyboardSymbolDecoder.v:3]
+INFO: [Synth 8-6157] synthesizing module 'packetHandler' [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/packetHandler.v:3]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/packetHandler.v:52]
+INFO: [Synth 8-6155] done synthesizing module 'packetHandler' (0#1) [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/packetHandler.v:3]
+INFO: [Synth 8-6157] synthesizing module 'packetDecoder' [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/packetDecoder.v:3]
+WARNING: [Synth 8-567] referenced signal 'numberScancodes' should be on the sensitivity list [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/packetDecoder.v:40]
+WARNING: [Synth 8-567] referenced signal 'numberScancodes' should be on the sensitivity list [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/packetDecoder.v:69]
+INFO: [Synth 8-6155] done synthesizing module 'packetDecoder' (0#1) [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/packetDecoder.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'keyboardSymbolDecoder' (0#1) [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/keyboardSymbolDecoder.v:3]
+INFO: [Synth 8-6157] synthesizing module 'InputInterfaceController' [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/InputInterfaceController.v:3]
+INFO: [Synth 8-6157] synthesizing module 'FilterDrebezga' [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/FilterDrebezga.v:3]
+	Parameter Delay bound to: 4096 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'Syncronizator' [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/Syncronizator.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'Syncronizator' (0#1) [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/Syncronizator.v:3]
+INFO: [Synth 8-6157] synthesizing module 'Counter_A' [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/Counter_A.v:3]
+	Parameter Max bound to: 4096 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Counter_A' (0#1) [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/Counter_A.v:3]
+WARNING: [Synth 8-7071] port 'Output_IsHalf' of module 'Counter_A' is unconnected for instance 'module_Counter' [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/FilterDrebezga.v:30]
+WARNING: [Synth 8-7071] port 'Output_Counter' of module 'Counter_A' is unconnected for instance 'module_Counter' [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/FilterDrebezga.v:30]
+WARNING: [Synth 8-7023] instance 'module_Counter' of module 'Counter_A' has 5 connections declared, but only 3 given [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/FilterDrebezga.v:30]
+INFO: [Synth 8-6155] done synthesizing module 'FilterDrebezga' (0#1) [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/FilterDrebezga.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'InputInterfaceController' (0#1) [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/InputInterfaceController.v:3]
+WARNING: [Synth 8-7071] port 'Input_Key_Release' of module 'InputInterfaceController' is unconnected for instance 'module_InputInterfaceController' [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/Main.v:106]
+WARNING: [Synth 8-7071] port 'Input_Key_Pressed' of module 'InputInterfaceController' is unconnected for instance 'module_InputInterfaceController' [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/Main.v:106]
+WARNING: [Synth 8-7071] port 'Input_Key_Special' of module 'InputInterfaceController' is unconnected for instance 'module_InputInterfaceController' [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/Main.v:106]
+WARNING: [Synth 8-7071] port 'Input_Key_Ready' of module 'InputInterfaceController' is unconnected for instance 'module_InputInterfaceController' [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/Main.v:106]
+WARNING: [Synth 8-7071] port 'Input_Scancode' of module 'InputInterfaceController' is unconnected for instance 'module_InputInterfaceController' [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/Main.v:106]
+WARNING: [Synth 8-7023] instance 'module_InputInterfaceController' of module 'InputInterfaceController' has 18 connections declared, but only 13 given [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/Main.v:106]
+INFO: [Synth 8-6157] synthesizing module 'uartRxTx' [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/uartRxTx.v:3]
+INFO: [Synth 8-6157] synthesizing module 'UART_ASCII_To_Hex' [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/UART_ASCII_To_Hex.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'UART_ASCII_To_Hex' (0#1) [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/UART_ASCII_To_Hex.v:3]
+INFO: [Synth 8-6157] synthesizing module 'UART_Reader' [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/UART_Reader.v:3]
+INFO: [Synth 8-6157] synthesizing module 'UART_Listener' [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/UART_Listener.v:3]
+	Parameter CLOCK_RATE bound to: 10416 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'Counter_A__parameterized0' [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/Counter_A.v:3]
+	Parameter Max bound to: 10416 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Counter_A__parameterized0' (0#1) [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/Counter_A.v:3]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/UART_Listener.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'UART_Listener' (0#1) [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/UART_Listener.v:3]
+INFO: [Synth 8-6157] synthesizing module 'UART_Distributor' [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/UART_Distributor.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'UART_Distributor' (0#1) [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/UART_Distributor.v:3]
+INFO: [Synth 8-6157] synthesizing module 'UART_Queue' [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/UART_Queue.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'UART_Queue' (0#1) [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/UART_Queue.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'UART_Reader' (0#1) [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/UART_Reader.v:3]
+WARNING: [Synth 8-7071] port 'Output_Listening' of module 'UART_Reader' is unconnected for instance 'module_UART_Reader' [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/uartRxTx.v:40]
+WARNING: [Synth 8-7023] instance 'module_UART_Reader' of module 'UART_Reader' has 8 connections declared, but only 7 given [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/uartRxTx.v:40]
+INFO: [Synth 8-6157] synthesizing module 'UART_Hex_To_ASCII' [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/UART_Hex_To_ASCII.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'UART_Hex_To_ASCII' (0#1) [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/UART_Hex_To_ASCII.v:3]
+INFO: [Synth 8-6157] synthesizing module 'UART_BackpackData_Transiver_Helper' [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/UART_BackpackData_Transmitter.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'UART_BackpackData_Transiver_Helper' (0#1) [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/UART_BackpackData_Transmitter.v:3]
+INFO: [Synth 8-6157] synthesizing module 'UART_Transiver' [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/UART_Transiver.v:3]
+INFO: [Synth 8-6157] synthesizing module 'UART_Package_Transiver' [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/UART_Package_Transiver.v:3]
+	Parameter CLOCK_RATE bound to: 10416 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/UART_Package_Transiver.v:30]
+INFO: [Synth 8-6155] done synthesizing module 'UART_Package_Transiver' (0#1) [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/UART_Package_Transiver.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'UART_Transiver' (0#1) [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/UART_Transiver.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'uartRxTx' (0#1) [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/uartRxTx.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'Main' (0#1) [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/Main.v:3]
+WARNING: [Synth 8-6014] Unused sequential element flagsDelayedKey_reg was removed.  [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/ShiftRegister.v:18]
+WARNING: [Synth 8-7137] Register FromState_reg in module UART_Transiver has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/UART_Transiver.v:43]
+WARNING: [Synth 8-7129] Port Input_clk in module UART_Hex_To_ASCII is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Input_Key_Pressed in module InputInterfaceController is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Output_DebugLed[7] in module Main is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Output_DebugLed[6] in module Main is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Output_DebugLed[5] in module Main is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 1294.117 ; gain = 0.000
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1355.445 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 1294.117 ; gain = 0.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 1355.445 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 1294.117 ; gain = 0.000
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 1355.445 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 1294.117 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 1355.445 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.srcs/constrs_1/new/constraints.xdc]
-Finished Parsing XDC File [D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.srcs/constrs_1/new/constraints.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.srcs/constrs_1/new/constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Main_propImpl.xdc].
+Parsing XDC File [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/constrs_1/new/constraints.xdc]
+Finished Parsing XDC File [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/constrs_1/new/constraints.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/constrs_1/new/constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Main_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/Main_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1340.375 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1355.445 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1340.375 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1355.445 ; gain = 0.000
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:14 . Memory (MB): peak = 1340.375 ; gain = 46.258
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:13 . Memory (MB): peak = 1355.445 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:14 . Memory (MB): peak = 1340.375 ; gain = 46.258
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:13 . Memory (MB): peak = 1355.445 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:06 ; elapsed = 00:00:14 . Memory (MB): peak = 1340.375 ; gain = 46.258
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:13 . Memory (MB): peak = 1355.445 ; gain = 0.000
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'packetHandler'
 ---------------------------------------------------------------------------------------------------
@@ -134,43 +201,61 @@ INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'packe
     packetEndExpectation |                            10000 |                              100
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'packetHandler'
+WARNING: [Synth 8-327] inferring latch for variable 'flags_reg' [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/packetDecoder.v:76]
+WARNING: [Synth 8-327] inferring latch for variable 'rButtonFlagD_reg' [D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.srcs/sources_1/new/packetDecoder.v:80]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:15 . Memory (MB): peak = 1340.375 ; gain = 46.258
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:14 . Memory (MB): peak = 1355.445 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input   15 Bit       Adders := 1     
+	   2 Input   15 Bit       Adders := 3     
+	   2 Input   13 Bit       Adders := 5     
+	   2 Input    5 Bit       Adders := 2     
 	   2 Input    4 Bit       Adders := 14    
 	   2 Input    3 Bit       Adders := 1     
-+---XORs : 
-	   2 Input      1 Bit         XORs := 5     
+	   3 Input    3 Bit       Adders := 2     
+	   2 Input    2 Bit       Adders := 2     
+	   3 Input    2 Bit       Adders := 2     
 +---XORs : 
 	                8 Bit    Wide XORs := 1     
 +---Registers : 
 	               64 Bit    Registers := 4     
+	               32 Bit    Registers := 2     
+	               15 Bit    Registers := 1     
 	               14 Bit    Registers := 1     
-	                8 Bit    Registers := 3     
-	                4 Bit    Registers := 11    
-	                3 Bit    Registers := 2     
-	                2 Bit    Registers := 2     
-	                1 Bit    Registers := 28    
+	               13 Bit    Registers := 5     
+	                8 Bit    Registers := 6     
+	                5 Bit    Registers := 2     
+	                4 Bit    Registers := 9     
+	                3 Bit    Registers := 4     
+	                2 Bit    Registers := 8     
+	                1 Bit    Registers := 75    
 +---Muxes : 
 	   6 Input   64 Bit        Muxes := 3     
+	   6 Input   32 Bit        Muxes := 2     
+	   2 Input   15 Bit        Muxes := 2     
+	   2 Input   13 Bit        Muxes := 10    
+	  11 Input    8 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 4     
 	   5 Input    5 Bit        Muxes := 1     
-	   2 Input    5 Bit        Muxes := 4     
+	   2 Input    5 Bit        Muxes := 5     
 	   5 Input    4 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 6     
 	   8 Input    4 Bit        Muxes := 1     
-	   2 Input    4 Bit        Muxes := 2     
 	  18 Input    4 Bit        Muxes := 1     
+	  17 Input    4 Bit        Muxes := 1     
 	   2 Input    3 Bit        Muxes := 1     
-	   2 Input    2 Bit        Muxes := 3     
-	   3 Input    2 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 6     
+	   4 Input    2 Bit        Muxes := 1     
 	   5 Input    1 Bit        Muxes := 6     
 	   6 Input    1 Bit        Muxes := 4     
-	   2 Input    1 Bit        Muxes := 8     
+	   2 Input    1 Bit        Muxes := 37    
+	   4 Input    1 Bit        Muxes := 3     
+	   3 Input    1 Bit        Muxes := 6     
+	  11 Input    1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -187,26 +272,29 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port Output_DebugLed[7] in module Main is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Output_DebugLed[6] in module Main is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Output_DebugLed[5] in module Main is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:22 . Memory (MB): peak = 1340.375 ; gain = 46.258
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:23 . Memory (MB): peak = 1355.445 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:27 . Memory (MB): peak = 1340.375 ; gain = 46.258
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:28 . Memory (MB): peak = 1355.445 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:27 . Memory (MB): peak = 1340.375 ; gain = 46.258
+Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:29 . Memory (MB): peak = 1355.445 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:12 ; elapsed = 00:00:28 . Memory (MB): peak = 1340.375 ; gain = 46.258
+Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:29 . Memory (MB): peak = 1355.445 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -224,37 +312,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:14 ; elapsed = 00:00:32 . Memory (MB): peak = 1340.375 ; gain = 46.258
+Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:00:33 . Memory (MB): peak = 1355.445 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:14 ; elapsed = 00:00:32 . Memory (MB): peak = 1340.375 ; gain = 46.258
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:00:33 . Memory (MB): peak = 1355.445 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:14 ; elapsed = 00:00:32 . Memory (MB): peak = 1340.375 ; gain = 46.258
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:00:33 . Memory (MB): peak = 1355.445 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:14 ; elapsed = 00:00:32 . Memory (MB): peak = 1340.375 ; gain = 46.258
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:33 . Memory (MB): peak = 1355.445 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:32 . Memory (MB): peak = 1340.375 ; gain = 46.258
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:33 . Memory (MB): peak = 1355.445 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:14 ; elapsed = 00:00:32 . Memory (MB): peak = 1340.375 ; gain = 46.258
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:33 . Memory (MB): peak = 1355.445 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -271,41 +359,48 @@ Report Cell Usage:
 |      |Cell   |Count |
 +------+-------+------+
 |1     |BUFG   |     1|
-|2     |CARRY4 |    12|
-|3     |LUT1   |    22|
-|4     |LUT2   |    55|
-|5     |LUT3   |    54|
-|6     |LUT4   |   149|
-|7     |LUT5   |    82|
-|8     |LUT6   |   355|
-|9     |MUXF7  |    41|
-|10    |MUXF8  |    15|
-|11    |FDRE   |   374|
-|12    |FDSE   |     5|
-|13    |IBUF   |    20|
-|14    |OBUF   |    16|
+|2     |CARRY4 |    39|
+|3     |LUT1   |    31|
+|4     |LUT2   |    79|
+|5     |LUT3   |    60|
+|6     |LUT4   |   179|
+|7     |LUT5   |   140|
+|8     |LUT6   |   525|
+|9     |MUXF7  |    48|
+|10    |MUXF8  |    13|
+|11    |FDCE   |     7|
+|12    |FDPE   |     7|
+|13    |FDRE   |   563|
+|14    |FDSE   |     5|
+|15    |LD     |     3|
+|16    |LDC    |     6|
+|17    |IBUF   |    21|
+|18    |OBUF   |    30|
+|19    |OBUFT  |     3|
 +------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:14 ; elapsed = 00:00:32 . Memory (MB): peak = 1340.375 ; gain = 46.258
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:33 . Memory (MB): peak = 1355.445 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:10 ; elapsed = 00:00:30 . Memory (MB): peak = 1340.375 ; gain = 0.000
-Synthesis Optimization Complete : Time (s): cpu = 00:00:14 ; elapsed = 00:00:32 . Memory (MB): peak = 1340.375 ; gain = 46.258
+Synthesis finished with 0 errors, 0 critical warnings and 6 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:31 . Memory (MB): peak = 1355.445 ; gain = 0.000
+Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:00:33 . Memory (MB): peak = 1355.445 ; gain = 0.000
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 1340.375 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 68 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.021 . Memory (MB): peak = 1355.445 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 109 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1340.375 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1355.445 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
+  A total of 9 instances were transformed.
+  LD => LDCE: 3 instances
+  LDC => LDCE: 6 instances
 
-Synth Design complete, checksum: 823bd4a5
+Synth Design complete, checksum: a1e9b123
 INFO: [Common 17-83] Releasing license: Synthesis
-57 Infos, 4 Warnings, 0 Critical Warnings and 0 Errors encountered.
+85 Infos, 43 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:37 . Memory (MB): peak = 1340.375 ; gain = 46.258
-INFO: [Common 17-1381] The checkpoint 'D:/Vivado_projects/VerilogMireaLab3/VerilogMireaLab/Lab.runs/synth_1/Main.dcp' has been generated.
+synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:38 . Memory (MB): peak = 1355.445 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'D:/Vivado_projects/Task_4_try/VerilogMireaLab/Lab.runs/synth_1/Main.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Main_utilization_synth.rpt -pb Main_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sat Apr 22 17:36:09 2023...
+INFO: [Common 17-206] Exiting Vivado at Tue May 23 20:25:59 2023...
